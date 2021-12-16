@@ -5,7 +5,14 @@
         "main.scss",
         "misc/_mixins.scss",
         "misc/_reset.scss",
-        "misc/_values.scss"
+        "misc/_values.scss",
+        "sections/_footer.scss",
+        "sections/_header.scss",
+        "sections/_hero.scss",
+        "sections/_left.scss",
+        "sections/_mainContent.scss",
+        "sections/_menu.scss",
+        "sections/_right.scss"
     ],
     "names": [],
     "file": "main.css"
