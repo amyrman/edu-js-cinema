@@ -42,4 +42,52 @@ img {
 .events {
   background-color: red;
 }
+
+.allMovies-header {
+  background-color: darkkhaki;
+}
+
+.allMovies-movies {
+  background-color: deeppink;
+}
+
+.allMovies-footer {
+  background-color: blue;
+}
+
+.pickMovie-header {
+  background-color: deepskyblue;
+}
+
+.pickMovie-hero {
+  background-color: olive;
+}
+
+.pickMovie-description {
+  background-color: darkmagenta;
+}
+
+.pickMovie-footer {
+  background-color: darksalmon;
+}
+
+.reservationHeader {
+  background-color: darkgoldenrod;
+}
+
+.reservationHero {
+  background-color: hotpink;
+}
+
+.reservationInfo {
+  background-color: mediumvioletred;
+}
+
+.reservationSeats {
+  background-color: #0bb822;
+}
+
+.reservationFooter {
+  background-color: darkseagreen;
+}
 /*# sourceMappingURL=main.css.map */

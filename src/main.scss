@@ -10,3 +10,21 @@
 @import 'sections/ftMovies';
 @import 'sections/events';
 
+
+//allMovies-propertys
+@import 'sections/allMovies/allMovies-header';
+@import 'sections/allMovies/allMovies-movies';
+@import 'sections/allMovies/allMovies-footer';
+
+//picMovie-propertys
+@import 'sections/pickMovie/pickMovie-header';
+@import 'sections/pickMovie/pickMovie-hero';
+@import 'sections/pickMovie/pickMovie-description';
+@import 'sections/pickMovie/pickMovie-footer';
+
+//reservation-propertys
+@import 'sections/reservation/reservationHeader';
+@import 'sections/reservation/reservationHero';
+@import 'sections/reservation/reservationInfo';
+@import 'sections/reservation/reservationSeats';
+@import 'sections/reservation/reservationfooter';

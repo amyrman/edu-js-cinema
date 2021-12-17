@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AEAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,EAAE,CAAC;EACD,eAAe,EAAE,IAAI;CACtB;;AAED,AAAA,GAAG,CAAC;EACF,SAAS,EAAE,IAAI;CAChB;;AEXH,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,UAAU;CAC/B;;ACFD,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,UAAU;CAC/B;;ACFD,AAAA,KAAK,CAAA;EACD,gBAAgB,EAAE,cAAc;CACnC;;ACFD,AAAA,WAAW,CAAA;EACP,gBAAgB,EAAE,IAAI;CACzB;;ACFD,AAAA,MAAM,CAAA;EACF,gBAAgB,EAAE,KAAK;CAC1B;;ACFD,AAAA,WAAW,CAAA;EACP,gBAAgB,EAAE,MAAM;CAC3B;;ACFD,AAAA,SAAS,CAAA;EACL,gBAAgB,EAAE,SAAS;CAC9B;;ACFD,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,GAAG;CACxB",
+    "mappings": "AEAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,EAAE,CAAC;EACD,eAAe,EAAE,IAAI;CACtB;;AAED,AAAA,GAAG,CAAC;EACF,SAAS,EAAE,IAAI;CAChB;;AEXH,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,UAAU;CAC/B;;ACFD,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,UAAU;CAC/B;;ACFD,AAAA,KAAK,CAAA;EACD,gBAAgB,EAAE,cAAc;CACnC;;ACFD,AAAA,WAAW,CAAA;EACP,gBAAgB,EAAE,IAAI;CACzB;;ACFD,AAAA,MAAM,CAAA;EACF,gBAAgB,EAAE,KAAK;CAC1B;;ACFD,AAAA,WAAW,CAAA;EACP,gBAAgB,EAAE,MAAM;CAC3B;;ACFD,AAAA,SAAS,CAAA;EACL,gBAAgB,EAAE,SAAS;CAC9B;;ACFD,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,GAAG;CACxB;;ACFD,AAAA,iBAAiB,CAAA;EACb,gBAAgB,EAAE,SAAS;CAC9B;;ACFD,AAAA,iBAAiB,CAAA;EACb,gBAAgB,EAAE,QAAQ;CAC7B;;ACFD,AAAA,iBAAiB,CAAA;EACb,gBAAgB,EAAE,IAAI;CACzB;;ACFD,AAAA,iBAAiB,CAAA;EACb,gBAAgB,EAAE,WAAW;CAChC;;ACFD,AAAA,eAAe,CAAA;EACX,gBAAgB,EAAE,KAAK;CAC1B;;ACFD,AAAA,sBAAsB,CAAA;EAClB,gBAAgB,EAAE,WAAW;CAChC;;ACFD,AAAA,iBAAiB,CAAA;EACb,gBAAgB,EAAE,UAAU;CAC/B;;ACFD,AAAA,kBAAkB,CAAA;EACd,gBAAgB,EAAE,aAAa;CAClC;;ACFD,AAAA,gBAAgB,CAAA;EACZ,gBAAgB,EAAE,OAAO;CAC5B;;ACFD,AAAA,gBAAgB,CAAA;EACZ,gBAAgB,EAAE,eAAe;CACpC;;ACFD,AAAA,iBAAiB,CAAA;EACb,gBAAgB,EAAC,OAAgB;CACpC;;ACFD,AAAA,kBAAkB,CAAA;EACd,gBAAgB,EAAE,YAAY;CACjC",
     "sources": [
         "main.scss",
         "misc/_mixins.scss",
@@ -13,7 +13,19 @@
         "sections/_about.scss",
         "sections/_movieCards.scss",
         "sections/_ftMovies.scss",
-        "sections/_events.scss"
+        "sections/_events.scss",
+        "sections/allMovies/_allMovies-header.scss",
+        "sections/allMovies/_allMovies-movies.scss",
+        "sections/allMovies/_allMovies-footer.scss",
+        "sections/pickMovie/_pickMovie-header.scss",
+        "sections/pickMovie/_pickMovie-hero.scss",
+        "sections/pickMovie/_pickMovie-description.scss",
+        "sections/pickMovie/_pickMovie-footer.scss",
+        "sections/reservation/_reservationHeader.scss",
+        "sections/reservation/_reservationHero.scss",
+        "sections/reservation/_reservationInfo.scss",
+        "sections/reservation/_reservationSeats.scss",
+        "sections/reservation/_reservationfooter.scss"
     ],
     "names": [],
     "file": "main.css"
