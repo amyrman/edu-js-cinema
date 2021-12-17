@@ -10,4 +10,36 @@ li {
 img {
   max-width: 100%;
 }
+
+.footer {
+  background-color: blueviolet;
+}
+
+.header {
+  background-color: chartreuse;
+}
+
+.hero {
+  background-color: cornflowerblue;
+}
+
+.comingSoon {
+  background-color: aqua;
+}
+
+.about {
+  background-color: coral;
+}
+
+.movieCards {
+  background-color: yellow;
+}
+
+.ftMovies {
+  background-color: burlywood;
+}
+
+.events {
+  background-color: red;
+}
 /*# sourceMappingURL=main.css.map */

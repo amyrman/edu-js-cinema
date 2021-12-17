@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AEAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,EAAE,CAAC;EACD,eAAe,EAAE,IAAI;CACtB;;AAED,AAAA,GAAG,CAAC;EACF,SAAS,EAAE,IAAI;CAChB",
+    "mappings": "AEAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,EAAE,CAAC;EACD,eAAe,EAAE,IAAI;CACtB;;AAED,AAAA,GAAG,CAAC;EACF,SAAS,EAAE,IAAI;CAChB;;AEXH,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,UAAU;CAC/B;;ACFD,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,UAAU;CAC/B;;ACFD,AAAA,KAAK,CAAA;EACD,gBAAgB,EAAE,cAAc;CACnC;;ACFD,AAAA,WAAW,CAAA;EACP,gBAAgB,EAAE,IAAI;CACzB;;ACFD,AAAA,MAAM,CAAA;EACF,gBAAgB,EAAE,KAAK;CAC1B;;ACFD,AAAA,WAAW,CAAA;EACP,gBAAgB,EAAE,MAAM;CAC3B;;ACFD,AAAA,SAAS,CAAA;EACL,gBAAgB,EAAE,SAAS;CAC9B;;ACFD,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,GAAG;CACxB",
     "sources": [
         "main.scss",
         "misc/_mixins.scss",
@@ -9,10 +9,11 @@
         "sections/_footer.scss",
         "sections/_header.scss",
         "sections/_hero.scss",
-        "sections/_left.scss",
-        "sections/_mainContent.scss",
-        "sections/_menu.scss",
-        "sections/_right.scss"
+        "sections/_comingSoon.scss",
+        "sections/_about.scss",
+        "sections/_movieCards.scss",
+        "sections/_ftMovies.scss",
+        "sections/_events.scss"
     ],
     "names": [],
     "file": "main.css"
