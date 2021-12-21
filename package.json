@@ -1,0 +1,15 @@
+{
+  "name": "kino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "webpack": "^5.65.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "watch": "webpack --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
