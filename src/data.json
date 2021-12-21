@@ -1,0 +1,405 @@
+{
+  "movies": [
+    {
+      "movieID": 1,
+      "movieTitle": "Bamse och vulkanön",
+      "age": "barntillåten",
+      "genre": ["Barn", "Familj", "Animerat"],
+      "description": "Just som allt verkar vara lugnt och skönt hemma hos Bamse och hans vänner kommer ett nödanrop från Skalmans gamla forskarkollega, biologen Beanka, som mystiskt verkar ha försvunnit på en forskningsresa. Trots att Lille Skutt darrande försöker förklara varför det alltid är dumt att åka på äventyr man inte riktigt vet hur de skall sluta, ger sig våra vänner ut på ett räddningsuppdrag som tar dem förbi hungriga vargar, själviska skurkar och livsfarliga vulkanutbrott. I hasorna har de dessutom en ny antagonist i Bamses värld - den mer än självgoda och självförhärligande småtjuven Kattja som i Bamse och Vulkanön gör sitt intåg i Bamses värld.",
+      "duration": "1h 6min",
+      "release": "2021-12-22",
+      "bannerImg": "src/img/banner/banner-1.jpg",
+      "screenImg1": "src/img/screens/screen1-1.jpg",
+      "screenImg2": "src/img/screens/screen1-2.jpg",
+      "screenImg3": "src/img/screens/screen1-3.jpg",
+      "coverImg": "src/img/covers/cover1.jpg",
+      "trailerUrl": "src/video/trailer1.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt14631498/?ref_=nv_sr_srsg_0",
+      "imdbRating": "5",
+      "performances": [
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "17:00",
+          "date": "2021-12-22",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "20:00",
+          "date": "2021-12-22",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "20:00",
+          "date": "2021-12-23",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "20:00",
+          "date": "2021-12-24",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "20:00",
+          "date": "2021-12-25",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "20:00",
+          "date": "2021-12-26",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "20:00",
+          "date": "2021-12-27",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "20:00",
+          "date": "2021-12-28",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        }
+      ]
+    },
+    {
+      "movieID": 2,
+      "movieTitle": "Spider-Man: No Way Home",
+      "age": "11 år",
+      "genre": ["Action", "Äventyr", "Sci-Fi"],
+      "description": "För första gången i filmhistorien får vi följa allas vår favorithjälte Spider-Man utan sin mask, och hur han inte längre kan separera sitt normala liv från riskerna med att vara en superhjälte. När han ber Doctor Strange om hjälp blir insatserna ännu farligare, och han tvingas upptäcka vad det verkligen innebär att vara Spider-Man.",
+      "duration": "2h 28min",
+      "release": "2021-12-15",
+      "bannerImg": "src/img/banner/banner-2.jpg",
+      "screenImg1": "src/img/screens/screen2-1.jpg",
+      "screenImg2": "src/img/screens/screen2-2.jpg",
+      "screenImg3": "src/img/screens/screen2-3.jpg",
+      "coverImg": "src/img/covers/cover2.jpg",
+      "trailerUrl": "src/video/trailer2.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt10872600/?ref_=nv_sr_srsg_0",
+      "imdbRating": "9.0",
+      "performances": [
+        {
+          "saloonNr": 2,
+          "saloonName": "Display Room",
+          "startTime": "17:00",
+          "date": "2021-12-22",
+          "totalSeatsSaloon": 100,
+          "availableSeatsSalon": 100,
+          "price": 130
+        },
+        {
+          "saloonNr": 2,
+          "saloonName": "Display Room",
+          "startTime": "20:00",
+          "date": "2021-12-22",
+          "totalSeatsSaloon": 100,
+          "availableSeatsSalon": 100,
+          "price": 130
+        }
+      ]
+    },
+    {
+      "movieID": 3,
+      "movieTitle": "No Time to Die",
+      "age": "15 år",
+      "genre": ["Action", "Äventyr", "Thriller"],
+      "description": "James Bond har lämnat sin tjänst och njuter av ett lugnt liv på Jamaica. Det blir dock kortvarigt när hans gamla vän Felix Leiter från CIA dyker upp och ber om hjälp. Uppdraget att rädda en kidnappad forskare visar sig bli mer förrädiskt än väntat.",
+      "duration": "2h 43min",
+      "release": "2021-09-30",
+      "bannerImg": "src/img/banner/banner-3.jpg",
+      "screenImg1": "src/img/screens/screen3-1.jpg",
+      "screenImg2": "src/img/screens/screen3-2.jpg",
+      "screenImg3": "src/img/screens/screen3-3.jpg",
+      "coverImg": "src/img/covers/cover3.jpg",
+      "trailerUrl": "src/video/trailer3.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt2382320/?ref_=nv_sr_srsg_0",
+      "imdbRating": "7.4",
+      "performances": [
+        {
+          "saloonNr": 3,
+          "saloonName": "Screen Room",
+          "startTime": "17:00",
+          "date": "2021-12-22",
+          "totalSeatsSaloon": 130,
+          "availableSeatsSalon": 130,
+          "price": 140
+        },
+        {
+          "saloonNr": 3,
+          "saloonName": "Screen Room",
+          "startTime": "20:00",
+          "date": "2021-12-22",
+          "totalSeatsSaloon": 130,
+          "availableSeatsSalon": 130,
+          "price": 140
+        },
+        {
+          "saloonNr": 3,
+          "saloonName": "Screen Room",
+          "startTime": "20:00",
+          "date": "2021-12-23",
+          "totalSeatsSaloon": 130,
+          "availableSeatsSalon": 130,
+          "price": 140
+        },
+        {
+          "saloonNr": 3,
+          "saloonName": "Screen Room",
+          "startTime": "20:00",
+          "date": "2021-12-24",
+          "totalSeatsSaloon": 130,
+          "availableSeatsSalon": 130,
+          "price": 140
+        },
+        {
+          "saloonNr": 3,
+          "saloonName": "Screen Room",
+          "startTime": "20:00",
+          "date": "2021-12-25",
+          "totalSeatsSaloon": 130,
+          "availableSeatsSalon": 130,
+          "price": 140
+        },
+        {
+          "saloonNr": 3,
+          "saloonName": "Screen Room",
+          "startTime": "20:00",
+          "date": "2021-12-26",
+          "totalSeatsSaloon": 130,
+          "availableSeatsSalon": 130,
+          "price": 140
+        },
+        {
+          "saloonNr": 3,
+          "saloonName": "Screen Room",
+          "startTime": "20:00",
+          "date": "2021-12-27",
+          "totalSeatsSaloon": 130,
+          "availableSeatsSalon": 130,
+          "price": 140
+        },
+        {
+          "saloonNr": 3,
+          "saloonName": "Screen Room",
+          "startTime": "20:00",
+          "date": "2021-12-28",
+          "totalSeatsSaloon": 130,
+          "availableSeatsSalon": 130,
+          "price": 140
+        }
+      ]
+    },
+    {
+      "movieID": 4,
+      "movieTitle": "Encanto",
+      "age": "7 år",
+      "genre": ["Animerat", "Äventyr", "Familj"],
+      "description": "Högt upp i bergen i Colombia finns en förtrollad plats kallad Encanto. Här, i ett magisk hus, bor den extraordinära familjen Madrigal där alla bär på fantastiska förmågor. Förutom Mirabel.",
+      "duration": "1h 41min",
+      "release": "2021-11-26",
+      "bannerImg": "src/img/banner/banner-4.jpg",
+      "screenImg1": "src/img/screens/screen4-1.jpg",
+      "screenImg2": "src/img/screens/screen4-2.jpg",
+      "screenImg3": "src/img/screens/screen4-3.jpg",
+      "coverImg": "src/img/covers/cover4.jpg",
+      "trailerUrl": "src/video/trailer4.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt2953050/?ref_=nv_sr_srsg_0",
+      "imdbRating": "7.6",
+      "performances": [
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "17:00",
+          "date": "2021-12-29",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "20:00",
+          "date": "2021-12-30",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "17:00",
+          "date": "2021-12-23",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "17:00",
+          "date": "2021-12-24",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "17:00",
+          "date": "2021-12-25",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "17:00",
+          "date": "2021-12-26",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "17:00",
+          "date": "2021-12-27",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "17:00",
+          "date": "2021-12-28",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        }
+      ]
+    },
+    {
+      "movieID": 5,
+      "movieTitle": "The Matrix Resurrections",
+      "age": "11 år",
+      "genre": ["Action", "Sci-FI"],
+      "description": "Den efterlängtade fjärde filmen i MATRIX-universumet, från den banbrytande franchisen som omdefinierade en genre. Filmen återförenar Keanu Reeves och Carrie-Anne Moss som Neo och Trinity, de ikoniska rollerna de gjorde kända i “The Matrix.",
+      "duration": "2h 27min",
+      "release": "2021-12-22",
+      "bannerImg": "src/img/banner/banner-5.jpg",
+      "screenImg1": "src/img/screens/screen5-1.jpg",
+      "screenImg2": "src/img/screens/screen5-2.jpg",
+      "screenImg3": "src/img/screens/screen5-3.jpg",
+      "coverImg": "src/img/covers/cover5.jpg",
+      "trailerUrl": "src/video/trailer5.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt10838180/?ref_=nv_sr_srsg_0",
+      "imdbRating": "6.9",
+      "performances": [
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "13:00",
+          "date": "2021-12-29",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
+          "date": "2021-12-30",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "13:00",
+          "date": "2021-12-23",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "13:00",
+          "date": "2021-12-24",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
+          "date": "2021-12-25",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
+          "date": "2021-12-26",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
+          "date": "2021-12-27",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
+          "date": "2021-12-28",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        }
+      ]
+    }
+  ]
+}
