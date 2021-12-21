@@ -1,3 +1,9 @@
-.events{
-    background-color: red;
+.events {
+  background-color: red;
+
+  .eventImage {
+    width: 15rem;
+    height: 10rem;
+    background-color: pink;
+  }
 }

@@ -4,11 +4,11 @@
   "description": "",
   "main": "script.js",
   "dependencies": {
-    "webpack": "^5.65.0"
+    "sass": "^1.45.1"
   },
   "devDependencies": {},
   "scripts": {
-    "watch": "webpack --watch"
+    "watch": "sass --watch src/main.scss main.css"
   },
   "author": "",
   "license": "ISC"
