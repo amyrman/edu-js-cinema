@@ -1,9 +1,65 @@
 .events {
-  background-color: red;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 20rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+
+  .eventsHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+
+    .eventsHeader {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .eventsContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .eventContainer {
+    width: 12rem;
+    height: 10rem;
+  }
 
   .eventImage {
-    width: 15rem;
-    height: 10rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
     background-color: pink;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .eventDate {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 3rem;
+    height: 3rem;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+  }
+
+  .eventTitle {
+    margin-top: 0.3rem;
   }
 }
