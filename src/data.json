@@ -223,7 +223,7 @@
       "movieID": 4,
       "movieTitle": "Encanto",
       "age": "7 år",
-      "genre": ["Animerat", "Äventyr", "Familj", "Animerat"],
+      "genre": ["Animerat", "Äventyr", "Familj"],
       "description": "Högt upp i bergen i Colombia finns en förtrollad plats kallad Encanto. Här, i ett magisk hus, bor den extraordinära familjen Madrigal där alla bär på fantastiska förmågor. Förutom Mirabel.",
       "duration": "1h 41min",
       "release": "2021-11-26",
@@ -303,6 +303,97 @@
           "saloonNr": 1,
           "saloonName": "Monitor Room",
           "startTime": "17:00",
+          "date": "2021-12-28",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        }
+      ]
+    },
+    {
+      "movieID": 5,
+      "movieTitle": "The Matrix Resurrections",
+      "age": "11 år",
+      "genre": ["Action", "Sci-FI"],
+      "description": "Den efterlängtade fjärde filmen i MATRIX-universumet, från den banbrytande franchisen som omdefinierade en genre. Filmen återförenar Keanu Reeves och Carrie-Anne Moss som Neo och Trinity, de ikoniska rollerna de gjorde kända i “The Matrix.",
+      "duration": "2h 27min",
+      "release": "2021-12-22",
+      "bannerImg": "src/img/banner/banner-5.jpg",
+      "screenImg1": "src/img/screens/screen5-1.jpg",
+      "screenImg2": "src/img/screens/screen5-2.jpg",
+      "screenImg3": "src/img/screens/screen5-3.jpg",
+      "coverImg": "src/img/covers/cover5.jpg",
+      "trailerUrl": "src/video/trailer5.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt10838180/?ref_=nv_sr_srsg_0",
+      "imdbRating": "6.9",
+      "performances": [
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "13:00",
+          "date": "2021-12-29",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
+          "date": "2021-12-30",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "13:00",
+          "date": "2021-12-23",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "13:00",
+          "date": "2021-12-24",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
+          "date": "2021-12-25",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
+          "date": "2021-12-26",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
+          "date": "2021-12-27",
+          "totalSeatsSaloon": 50,
+          "availableSeatsSalon": 50,
+          "price": 110
+        },
+        {
+          "saloonNr": 1,
+          "saloonName": "Monitor Room",
+          "startTime": "23:00",
           "date": "2021-12-28",
           "totalSeatsSaloon": 50,
           "availableSeatsSalon": 50,
