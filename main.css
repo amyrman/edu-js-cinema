@@ -50,9 +50,9 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
-    height: 20rem;
+    height: 26rem;
     box-sizing: border-box;
     margin-bottom: 2rem;
   }
@@ -75,7 +75,7 @@ img {
     align-items: center;
   }
   .events .eventContainer {
-    width: 12rem;
+    width: 14rem;
     height: 9rem;
   }
   .events .eventImage {
@@ -99,9 +99,12 @@ img {
     right: 10px;
     top: 10px;
     text-align: center;
+    font-weight: 600;
   }
   .events .eventTitle {
     margin-top: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 }
 .allMovies-header {
