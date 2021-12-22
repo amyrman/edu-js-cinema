@@ -16,6 +16,8 @@
       "trailerUrl": "src/video/trailer1.avi",
       "imdbUrl": "https://www.imdb.com/title/tt14631498/?ref_=nv_sr_srsg_0",
       "imdbRating": "5",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
       "performances": [
         {
           "saloonNr": 1,
@@ -107,6 +109,8 @@
       "trailerUrl": "src/video/trailer2.avi",
       "imdbUrl": "https://www.imdb.com/title/tt10872600/?ref_=nv_sr_srsg_0",
       "imdbRating": "9.0",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
       "performances": [
         {
           "saloonNr": 2,
@@ -144,6 +148,8 @@
       "trailerUrl": "src/video/trailer3.avi",
       "imdbUrl": "https://www.imdb.com/title/tt2382320/?ref_=nv_sr_srsg_0",
       "imdbRating": "7.4",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
       "performances": [
         {
           "saloonNr": 3,
@@ -235,6 +241,8 @@
       "trailerUrl": "src/video/trailer4.avi",
       "imdbUrl": "https://www.imdb.com/title/tt2953050/?ref_=nv_sr_srsg_0",
       "imdbRating": "7.6",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
       "performances": [
         {
           "saloonNr": 1,
@@ -326,6 +334,8 @@
       "trailerUrl": "src/video/trailer5.avi",
       "imdbUrl": "https://www.imdb.com/title/tt10838180/?ref_=nv_sr_srsg_0",
       "imdbRating": "6.9",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
       "performances": [
         {
           "saloonNr": 1,
@@ -417,6 +427,8 @@
       "trailerUrl": "src/video/trailer6.avi",
       "imdbUrl": "https://www.imdb.com/title/tt5834426/?ref_=fn_al_tt_1",
       "imdbRating": "TBD",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
       "performances": []
     },
     {
@@ -435,6 +447,8 @@
       "trailerUrl": "src/video/trailer7.avi",
       "imdbUrl": "https://www.imdb.com/title/tt1464335/?ref_=nv_sr_srsg_0",
       "imdbRating": "TBD",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
       "performances": []
     },
     {
@@ -453,6 +467,8 @@
       "trailerUrl": "src/video/trailer8.avi",
       "imdbUrl": "https://www.imdb.com/title/tt1877830/?ref_=nv_sr_srsg_0",
       "imdbRating": "TBD",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
       "performances": []
     },
     {
@@ -471,6 +487,8 @@
       "trailerUrl": "src/video/trailer9.avi",
       "imdbUrl": "https://www.imdb.com/title/tt10298810/?ref_=nv_sr_srsg_0",
       "imdbRating": "TBD",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
       "performances": []
     }
   ],
