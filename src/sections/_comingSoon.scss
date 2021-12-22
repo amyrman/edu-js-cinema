@@ -8,13 +8,13 @@
   padding-top: 20px;
 }
 
-.textSoon {
+.comingSoonText {
   display: flex;
   justify-content: center;
   position: relative;
   bottom: 40px;
 }
-.textSoon a {
+.comingSoonText a {
   text-decoration: none;
   background-color: #c51010;
   border: none;
@@ -27,12 +27,12 @@
   cursor: pointer;
 }
 
-.imgSoon {
+.comingSoonImg {
   display: flex;
   justify-content: center;
 }
 
-.imgSoon img {
+.comingSoonImg img {
   height: 400px;
   width: 600px;
 }
