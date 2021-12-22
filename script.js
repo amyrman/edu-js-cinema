@@ -41,6 +41,9 @@ const render = async () => {
         const eventContainer = document.createElement('div');
         eventContainer.className = 'eventContainer';
 
+        const eventLink = document.createElement('a');
+        eventLink.href = '#';
+
         const eventImage = document.createElement('div');
         eventImage.className = 'eventImage';
         eventImage.style.backgroundImage = `url(${data[i].bannerImg})`
@@ -90,7 +93,7 @@ const render = async () => {
             case 12:
                 eventDateSecondDiv.innerText = 'Dec'
                 break;
-        }
+        };
         eventDate.appendChild(eventDateSecondDiv);
 
         const eventTitle = document.createElement('div');
@@ -99,8 +102,9 @@ const render = async () => {
 
         eventContainer.appendChild(eventImage);
         eventImage.appendChild(eventDate);
-        eventContainer.appendChild(eventTitle)
-        eventsContainer.appendChild(eventContainer);
+        eventContainer.appendChild(eventTitle);
+        eventLink.appendChild(eventContainer);
+        eventsContainer.appendChild(eventLink);
     }
 
 
