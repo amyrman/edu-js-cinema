@@ -13,7 +13,34 @@ img {
 }
 
 .footer {
-  background-color: blueviolet;
+  margin-top: 100px;
+}
+.footer .footerLinks {
+  display: flex;
+  justify-content: center;
+}
+.footer .footerLinks a {
+  margin: 0px 10px;
+}
+.footer a:hover {
+  color: #2006b3;
+}
+.footer .adress {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.footer .socialMedia {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.footer .socialMedia li {
+  font-size: 30px;
+  margin: 0px 20px;
+}
+.footer .socialMedia li:hover {
+  font-size: 32px;
 }
 
 .header {
