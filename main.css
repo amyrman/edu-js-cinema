@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 li {
@@ -12,7 +13,34 @@ img {
 }
 
 .footer {
-  background-color: blueviolet;
+  margin-top: 100px;
+}
+.footer .footerLinks {
+  display: flex;
+  justify-content: center;
+}
+.footer .footerLinks a {
+  margin: 0px 10px;
+}
+.footer a:hover {
+  color: #2006b3;
+}
+.footer .adress {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.footer .socialMedia {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.footer .socialMedia li {
+  font-size: 30px;
+  margin: 0px 20px;
+}
+.footer .socialMedia li:hover {
+  font-size: 32px;
 }
 
 .header {
@@ -24,44 +52,7 @@ img {
 }
 
 .comingSoon {
-  background-color: black;
-  color: white;
-}
-
-.comingSoon h2 {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-.textSoon {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 40px;
-}
-
-.textSoon a {
-  text-decoration: none;
-  background-color: purple;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.imgSoon {
-  display: flex;
-  justify-content: center;
-}
-
-.imgSoon img {
-  height: 400px;
-  width: 600px;
+  background-color: aqua;
 }
 
 .about {
@@ -77,9 +68,72 @@ img {
 }
 
 .events {
-  background-color: red;
+  display: none;
 }
 
+@media screen and (min-width: 960px) {
+  .events {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 26rem;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+  }
+  .events .eventsHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+  }
+  .events .eventsHeaderContainer .eventsHeader {
+    margin-bottom: 1rem;
+  }
+  .events .eventsContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .events .eventContainer {
+    width: 14rem;
+    height: 9rem;
+  }
+  .events .eventImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .events .eventDate {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 3rem;
+    height: 3rem;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .events .eventTitle {
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}
 .allMovies-header {
   background-color: darkkhaki;
 }
