@@ -436,6 +436,42 @@
       "imdbUrl": "https://www.imdb.com/title/tt1464335/?ref_=nv_sr_srsg_0",
       "imdbRating": "TBD",
       "performances": []
+    },
+    {
+      "movieID": 8,
+      "movieTitle": "The Batman",
+      "age": "TBD",
+      "genre": ["Action", "Drama"],
+      "description": "En seriemördare försöker locka in Gothams brottsbekämpare i ett spel att slå ursinnigt mot orättvisorna där de uppstår. Men i Batmans mörka siluett finns en genomträngande blick som metodiskt förstör leken för den undre världen. I The Batman återvänder vi till den ursprungliga legenden om playboy-miljonären med ett alterego som hämnare. Robert Pattinson, från 'Tenet' och 'Twilight', spelar titelrollen som Bruce Wayne/Batman och Jeffrey Wright ('Hunger Games') spelar kommissarie Gordon, Batmans inofficiella kontakt hos polisen.",
+      "duration": "TBD",
+      "release": "2022-03-02",
+      "bannerImg": "src/img/banner/banner-8.jpg",
+      "screenImg1": "src/img/screens/screen8-1.jpg",
+      "screenImg2": "src/img/screens/screen8-2.jpg",
+      "screenImg3": "src/img/screens/screen8-3.jpg",
+      "coverImg": "src/img/covers/cover8.jpg",
+      "trailerUrl": "src/video/trailer8.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt1877830/?ref_=nv_sr_srsg_0",
+      "imdbRating": "TBD",
+      "performances": []
+    },
+    {
+      "movieID": 9,
+      "movieTitle": "Lightyear",
+      "age": "TBD",
+      "genre": ["Action", "Animerat", "Familj", "Äventyr"],
+      "description": "En seriemördare försöker locka in Gothams brottsbekämpare i ett spel att slå ursinnigt mot orättvisorna där de uppstår. Men i Batmans mörka siluett finns en genomträngande blick som metodiskt förstör leken för den undre världen. I The Batman återvänder vi till den ursprungliga legenden om playboy-miljonären med ett alterego som hämnare. Robert Pattinson, från 'Tenet' och 'Twilight', spelar titelrollen som Bruce Wayne/Batman och Jeffrey Wright ('Hunger Games') spelar kommissarie Gordon, Batmans inofficiella kontakt hos polisen.",
+      "duration": "TBD",
+      "release": "2022-06-17",
+      "bannerImg": "src/img/banner/banner-9.jpg",
+      "screenImg1": "src/img/screens/screen9-1.jpg",
+      "screenImg2": "src/img/screens/screen9-2.jpg",
+      "screenImg3": "src/img/screens/screen9-3.jpg",
+      "coverImg": "src/img/covers/cover9.jpg",
+      "trailerUrl": "src/video/trailer9.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt10298810/?ref_=nv_sr_srsg_0",
+      "imdbRating": "TBD",
+      "performances": []
     }
   ],
   "events": [
