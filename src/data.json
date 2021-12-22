@@ -400,6 +400,24 @@
           "price": 110
         }
       ]
+    },
+    {
+      "movieID": 6,
+      "movieTitle": "Moonfall",
+      "age": "TBD",
+      "genre": ["Action", "Sci-Fi", "Äventyr"],
+      "description": "En mystisk kraft kastar månen ur sin omloppsbana och skickar den på en kollisionskurs mot jorden. Med bara några veckor innan världen kan förintas är NASA-chefen och före detta astronauten, Jo Fowler, övertygad om att hon har nyckeln som kan rädda världen. Men bara en astronaut och en konspirationsteoretiker tror på henne. Dessa osannolika hjältar har ett omöjligt sista uppdrag i rymden framför sig och lämnar alla de älskar, bara för att få reda på att vår måne inte är vad vi tror att den är.",
+      "duration": "TBD",
+      "release": "2022-02-04",
+      "bannerImg": "src/img/banner/banner-6.jpg",
+      "screenImg1": "src/img/screens/screen6-1.jpg",
+      "screenImg2": "src/img/screens/screen6-2.jpg",
+      "screenImg3": "src/img/screens/screen6-3.jpg",
+      "coverImg": "src/img/covers/cover6.jpg",
+      "trailerUrl": "src/video/trailer5.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt10838180/?ref_=nv_sr_srsg_0",
+      "imdbRating": "TBD",
+      "performances": []
     }
   ]
 }
