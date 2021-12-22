@@ -13,8 +13,23 @@ const load = async() => {
       }
 }
 
+const loadEvents = async() => {
+  const url = 'src/data.json';
+      try {
+          const response = await fetch(url);
+          const data = await response.json();
+          const events = data.events;
+          return events;
+      } catch (error) {
+          console.log(error);
+      }
+}
+
 const render = async () => {
   const data = await load()
+  const eventsData = await loadEvents()
+
+  console.log(eventsData)
 
   const eventsElement = document.querySelector('.events');
 
