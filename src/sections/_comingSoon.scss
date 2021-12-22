@@ -1,3 +1,38 @@
-.comingSoon{
-    background-color: aqua;
+.comingSoon {
+  background-color: black;
+  color: white;
+}
+.comingSoon h2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.textSoon {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 40px;
+}
+.textSoon a {
+  text-decoration: none;
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.imgSoon {
+  display: flex;
+  justify-content: center;
+}
+
+.imgSoon img {
+  height: 400px;
+  width: 600px;
 }

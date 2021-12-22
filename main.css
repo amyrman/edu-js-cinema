@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.footer {
+  background-color: blueviolet;
+}
+
+.header {
+  background-color: chartreuse;
+}
+
+.hero {
+  background-color: cornflowerblue;
+}
+
+.comingSoon {
+  background-color: black;
+  color: white;
+}
+
+.comingSoon h2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.textSoon {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 40px;
+}
+
+.textSoon a {
+  text-decoration: none;
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.imgSoon {
+  display: flex;
+  justify-content: center;
+}
+
+.imgSoon img {
+  height: 400px;
+  width: 600px;
+}
+
+.about {
+  background-color: coral;
+}
+
+.movieCards {
+  background-color: yellow;
+}
+
+.ftMovies {
+  background-color: burlywood;
+}
+
+.events {
+  background-color: red;
+}
+
+.allMovies-header {
+  background-color: darkkhaki;
+}
+
+.allMovies-movies {
+  background-color: deeppink;
+}
+
+.allMovies-footer {
+  background-color: blue;
+}
+
+.allMoviues-menu {
+  background-color: teal;
+}
+
+.pickMovie-header {
+  background-color: deepskyblue;
+}
+
+.pickMovie-hero {
+  background-color: olive;
+}
+
+.pickMovie-description {
+  background-color: darkmagenta;
+}
+
+.pickMovie-footer {
+  background-color: darksalmon;
+}
+
+.reservationHeader {
+  background-color: darkgoldenrod;
+}
+
+.reservationHero {
+  background-color: hotpink;
+}
+
+.reservationInfo {
+  background-color: mediumvioletred;
+}
+
+.reservationSeats {
+  background-color: #0bb822;
+}
+
+.reservationFooter {
+  background-color: darkseagreen;
+}
+
+/*# sourceMappingURL=main.css.map */
