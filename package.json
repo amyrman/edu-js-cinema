@@ -6,7 +6,6 @@
   "dependencies": {
     "sass": "^1.45.1"
   },
-  "devDependencies": {},
   "scripts": {
     "watch": "sass --watch src/main.scss main.css"
   },
