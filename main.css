@@ -74,6 +74,9 @@ img {
     justify-content: space-evenly;
     align-items: center;
   }
+  .events a {
+    text-decoration: none;
+  }
   .events .eventContainer {
     width: 14rem;
     height: 9rem;
