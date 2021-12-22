@@ -18,6 +18,7 @@
       "imdbRating": "5",
       "director": "Elin Musk",
       "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "originalLanguage": "Svenska",
       "performances": [
         {
@@ -113,6 +114,7 @@
       "originalLanguage": "Engelska",
       "director": "Elin Musk",
       "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": [
         {
           "saloonNr": 2,
@@ -153,6 +155,7 @@
       "originalLanguage": "Engelska",
       "director": "Elin Musk",
       "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": [
         {
           "saloonNr": 3,
@@ -247,6 +250,7 @@
       "originalLanguage": "Engelska",
       "director": "Elin Musk",
       "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": [
         {
           "saloonNr": 1,
@@ -341,6 +345,7 @@
       "originalLanguage": "Engelska",
       "director": "Elin Musk",
       "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": [
         {
           "saloonNr": 1,
@@ -435,6 +440,7 @@
       "originalLanguage": "Engelska",
       "director": "Elin Musk",
       "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": []
     },
     {
@@ -477,6 +483,7 @@
       "originalLanguage": "Engelska",
       "director": "Elin Musk",
       "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": []
     },
     {
@@ -498,6 +505,7 @@
       "director": "Elin Musk",
       "originalLanguage": "Engelska",
       "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": []
     }
   ],
