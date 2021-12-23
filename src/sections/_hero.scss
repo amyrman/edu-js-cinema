@@ -1,3 +1,59 @@
+@keyframes fade
+{
+  0%  {opacity: 0;}
+  50% {opacity: 1;}
+
+}
 .hero{
-    background-color: cornflowerblue;
+    background-color: $c-black;
+
+    .heroContainer::before {
+      filter: blur(5px);
+      opacity: 0;
+      visibility: 0;
+    }
+    .heroContainer {
+      display: block;
+      position: relative;
+      margin: auto;
+      text-align: center;
+
+      width: 960px;
+      height: 480px;
+
+
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 0 -150px 100px $c-black inset;
+      filter: blur(0);
+      transition: opacity 0.5s ease;
+      opacity: 1;
+      transition: background-image 0.5s ease;
+      .heroImg {
+        max-height: 480px;
+        max-width: auto;
+        
+      }
+
+      .heroPicPrev, .heroPicNext {
+        position: absolute;
+        top: calc(50% - 30px);
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        font-style: bold;
+        padding: 5px 15px;
+        &:hover {
+          background-color: rgba(110, 108, 108, 0.6);
+        }
+      }
+      .heroPicPrev {
+        left: -45px;
+      }
+      .heroPicNext {
+        right: calc(0% - 45px);
+      }
+
+    }
 }
