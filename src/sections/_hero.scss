@@ -1,11 +1,6 @@
 .hero{
     background-color: $c-black;
 
-    .heroContainer::before {
-      filter: blur(5px);
-      opacity: 0;
-      visibility: 0;
-    }
     .heroContainer {
       display: block;
       position: relative;

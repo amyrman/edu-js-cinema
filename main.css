@@ -68,11 +68,6 @@ img {
 .hero {
   background-color: #100f0f;
 }
-.hero .heroContainer::before {
-  filter: blur(5px);
-  opacity: 0;
-  visibility: 0;
-}
 .hero .heroContainer {
   display: block;
   position: relative;
