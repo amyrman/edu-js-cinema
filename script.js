@@ -103,43 +103,37 @@ const heroSlider = async() => {
     const prev = document.querySelector(".heroPicPrev");
     const next = document.querySelector(".heroPicNext");
     const heroContainer = document.querySelector(".heroContainer");
-    const heroImg = document.querySelector(".heroImg");
-
-    //Functions for next and previous slide
-    const heroNextSlide = () => {
-        slideIndex = slideIndex < movies.length-1 ? slideIndex += 1 : slideIndex = 0
-        heroImg.src = heroMovieBanner[slideIndex];
-    }
-    const heroPrevSlide = () => {
-        slideIndex = slideIndex ? slideIndex -= 1 : slideIndex = movies.length - 1;
-        heroImg.src = heroMovieBanner[slideIndex];
-    }
 
     // Get all banners from API
     const heroMovieBanner = [];
     for(let i=0, j = movies.length; i<j; i++) {
         heroMovieBanner.push(movies[i].bannerImg);
     }
+
+    //Functions for next and previous slide
+    const heroNextSlide = () => {
+        slideIndex = slideIndex < movies.length-1 ? slideIndex += 1 : slideIndex = 0
+        heroContainer.style.backgroundImage = `url(${heroMovieBanner[slideIndex]})`;
+    }
+    const heroPrevSlide = () => {
+        slideIndex = slideIndex ? slideIndex -= 1 : slideIndex = movies.length - 1;
+        heroContainer.style.backgroundImage = `url(${heroMovieBanner[slideIndex]})`;
+    }
+
+    // Set hero to first banner loaded from API
     let slideIndex = 0;
     heroContainer.style.backgroundImage = `url(${heroMovieBanner[slideIndex]})`;
 
+    // Click on previous and next to change banner
     next.addEventListener("click", ()=> {
-        slideIndex = slideIndex < movies.length-1 ? slideIndex += 1 : slideIndex = 0
-        heroContainer.style.backgroundImage = `url(${heroMovieBanner[slideIndex]})`;
+        heroNextSlide();
+        
     })
     prev.addEventListener("click", ()=> {
-        slideIndex = slideIndex ? slideIndex -= 1 : slideIndex = movies.length - 1;
-        heroContainer.style.backgroundImage = `url(${heroMovieBanner[slideIndex]})`;
-
+        heroPrevSlide();
     })
-    // // For img
-    // prev.addEventListener("click", ()=> {
-    //     heroPrevSlide();
-    // })
-    // next.addEventListener("click", ()=> {
-    //     heroNextSlide();
-    // })
 
+    setInterval(heroNextSlide, 10000);
 }
 
 

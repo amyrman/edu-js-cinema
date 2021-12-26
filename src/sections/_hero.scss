@@ -1,9 +1,3 @@
-@keyframes fade
-{
-  0%  {opacity: 0;}
-  50% {opacity: 1;}
-
-}
 .hero{
     background-color: $c-black;
 
@@ -17,24 +11,13 @@
       position: relative;
       margin: auto;
       text-align: center;
-
-      width: 960px;
+      width: auto;
       height: 480px;
-
-
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       box-shadow: 0 -150px 100px $c-black inset;
-      filter: blur(0);
-      transition: opacity 0.5s ease;
-      opacity: 1;
       transition: background-image 0.5s ease;
-      .heroImg {
-        max-height: 480px;
-        max-width: auto;
-        
-      }
 
       .heroPicPrev, .heroPicNext {
         position: absolute;
@@ -49,10 +32,10 @@
         }
       }
       .heroPicPrev {
-        left: -45px;
+        left: 0;
       }
       .heroPicNext {
-        right: calc(0% - 45px);
+        right: 0;
       }
 
     }
