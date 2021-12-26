@@ -1,3 +1,38 @@
-.comingSoon{
-    background-color: aqua;
+.comingSoon {
+  background-color: black;
+  color: white;
+}
+.comingSoon h2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.comingSoonText {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 40px;
+}
+.comingSoonText a {
+  text-decoration: none;
+  background-color: #c51010;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.comingSoonImg {
+  display: flex;
+  justify-content: center;
+}
+
+.comingSoonImg img {
+  height: 400px;
+  width: 600px;
 }

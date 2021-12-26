@@ -1,3 +1,30 @@
-.footer{
-    background-color: blueviolet;
+.footer {
+  margin-top: 100px;
+  .footerLinks {
+    display: flex;
+    justify-content: center;
+    a {
+      margin: 0px 10px;
+    }
+  }
+  a:hover{
+      color: rgb(32, 6, 179);
+  }
+  .adress {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    li {
+      font-size: 30px;
+      margin: 0px 20px;
+    }
+    li:hover{
+        font-size: 32px;
+    }
+  }
 }

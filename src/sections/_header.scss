@@ -1,3 +1,18 @@
-.header{
-    background-color: chartreuse;
+.header {
+  a {
+    @include menu-link;
+    font-weight: bold;
+  }
+  @include desktop {
+    background-color: $c-black;
+
+    .headerNavMenu {
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      padding: 2rem 3rem;
+    }
+  }
 }
