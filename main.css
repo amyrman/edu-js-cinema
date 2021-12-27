@@ -13,19 +13,132 @@ img {
 }
 
 .footer {
-  background-color: blueviolet;
+  margin-top: 100px;
+}
+.footer .footerLinks {
+  display: flex;
+  justify-content: center;
+}
+.footer .footerLinks a {
+  margin: 0px 10px;
+}
+.footer a:hover {
+  color: #2006b3;
+}
+.footer .adress {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.footer .socialMedia {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.footer .socialMedia li {
+  font-size: 30px;
+  margin: 0px 20px;
+}
+.footer .socialMedia li:hover {
+  font-size: 32px;
 }
 
-.header {
-  background-color: chartreuse;
+.header a {
+  color: #FAFAFA;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: bold;
+}
+.header a:hover {
+  color: #C51010;
+}
+@media screen and (min-width: 960px) {
+  .header {
+    background-color: #100f0f;
+  }
+  .header .headerNavMenu {
+    display: flex;
+    justify-content: center;
+  }
+  .header li {
+    padding: 2rem 3rem;
+  }
 }
 
 .hero {
-  background-color: cornflowerblue;
+  background-color: #100f0f;
+}
+.hero .heroContainer {
+  display: block;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  width: auto;
+  height: 640px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 -150px 100px #100f0f inset;
+  transition: background-image 1s ease-in-out;
+}
+.hero .heroContainer .heroPicPrev, .hero .heroContainer .heroPicNext {
+  position: absolute;
+  top: calc(50% - 30px);
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  font-style: bold;
+  padding: 5px 15px;
+}
+.hero .heroContainer .heroPicPrev:hover, .hero .heroContainer .heroPicNext:hover {
+  background-color: rgba(110, 108, 108, 0.6);
+}
+.hero .heroContainer .heroPicPrev {
+  left: 0;
+}
+.hero .heroContainer .heroPicNext {
+  right: 0;
 }
 
 .comingSoon {
-  background-color: aqua;
+  background-color: black;
+  color: white;
+}
+
+.comingSoon h2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.comingSoonText {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 40px;
+}
+
+.comingSoonText a {
+  text-decoration: none;
+  background-color: #c51010;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.comingSoonImg {
+  display: flex;
+  justify-content: center;
+}
+
+.comingSoonImg img {
+  height: 400px;
+  width: 600px;
 }
 
 .about {

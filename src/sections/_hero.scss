@@ -1,3 +1,38 @@
 .hero{
-    background-color: cornflowerblue;
+    background-color: $c-black;
+
+    .heroContainer {
+      display: block;
+      position: relative;
+      margin: auto;
+      text-align: center;
+      width: auto;
+      height: 640px;
+      // height: 480px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 0 -150px 100px $c-black inset;
+      transition: background-image 1s ease-in-out;
+
+      .heroPicPrev, .heroPicNext {
+        position: absolute;
+        top: calc(50% - 30px);
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        font-style: bold;
+        padding: 5px 15px;
+        &:hover {
+          background-color: rgba(110, 108, 108, 0.6);
+        }
+      }
+      .heroPicPrev {
+        left: 0;
+      }
+      .heroPicNext {
+        right: 0;
+      }
+
+    }
 }
