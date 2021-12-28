@@ -172,10 +172,10 @@ img {
 .ftMovie .ftMovieContainer .ftMovieButton {
   box-sizing: border-box;
   margin-top: 1.5rem;
-  border: 2px solid #c51010;
+  border: 2px solid #fafafa;
   border-radius: 4px;
   padding: 0.5rem 2rem;
-  background-color: #fafafa;
+  background-color: #c51010;
   color: #c51010;
   font-weight: 600;
   text-decoration: none;
