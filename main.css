@@ -100,47 +100,47 @@ img {
   right: 0;
 }
 
-.comingSoon {
-  background-color: black;
-  color: white;
-}
+@media screen and (min-width: 960px) {
+  .comingSoon {
+    background-color: #100f0f;
+    color: #FAFAFA;
+  }
 
-.comingSoon h2 {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-}
+  .comingSoon h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
 
-.comingSoonText {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 40px;
-}
+  .comingSoonText {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 40px;
+  }
 
-.comingSoonText a {
-  text-decoration: none;
-  background-color: #c51010;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+  .comingSoonText a {
+    box-sizing: border-box;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    padding: 0.5rem 2.5rem;
+    background-color: #C51010;
+    color: #FAFAFA;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+  }
 
-.comingSoonImg {
-  display: flex;
-  justify-content: center;
-}
+  .comingSoonImg {
+    display: flex;
+    justify-content: center;
+  }
 
-.comingSoonImg img {
-  height: 400px;
-  width: 600px;
+  .comingSoonImg img {
+    height: 600px;
+    width: 600px;
+  }
 }
-
 .about {
   background-color: coral;
 }
