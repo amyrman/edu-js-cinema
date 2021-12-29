@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 li {
@@ -44,13 +44,13 @@ img {
 }
 
 .header a {
-  color: #FAFAFA;
+  color: #fafafa;
   text-decoration: none;
   transition: color 0.2s;
   font-weight: bold;
 }
 .header a:hover {
-  color: #C51010;
+  color: #c51010;
 }
 @media screen and (min-width: 960px) {
   .header {
@@ -81,7 +81,8 @@ img {
   box-shadow: 0 -150px 100px #100f0f inset;
   transition: background-image 1s ease-in-out;
 }
-.hero .heroContainer .heroPicPrev, .hero .heroContainer .heroPicNext {
+.hero .heroContainer .heroPicPrev,
+.hero .heroContainer .heroPicNext {
   position: absolute;
   top: calc(50% - 30px);
   font-size: 30px;
@@ -90,7 +91,8 @@ img {
   font-style: bold;
   padding: 5px 15px;
 }
-.hero .heroContainer .heroPicPrev:hover, .hero .heroContainer .heroPicNext:hover {
+.hero .heroContainer .heroPicPrev:hover,
+.hero .heroContainer .heroPicNext:hover {
   background-color: rgba(110, 108, 108, 0.6);
 }
 .hero .heroContainer .heroPicPrev {
@@ -103,7 +105,7 @@ img {
 @media screen and (min-width: 960px) {
   .comingSoon {
     background-color: #100f0f;
-    color: #FAFAFA;
+    color: #fafafa;
   }
 
   .comingSoon h2 {
@@ -124,11 +126,11 @@ img {
     margin-top: 1.5rem;
     border-radius: 4px;
     padding: 0.5rem 2.5rem;
-    background-color: #C51010;
-    color: #FAFAFA;
+    background-color: #c51010;
+    color: #fafafa;
     font-weight: 600;
     text-decoration: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .comingSoonImg {
@@ -150,7 +152,7 @@ img {
 }
 
 .ftMovie .ftMovieContainer {
-  background-image: url("src/img/banner/banner-5.jpg");
+  background-image: url('src/img/banner/banner-5.jpg');
   background-position: top;
   background-size: cover;
   height: 25rem;
@@ -173,11 +175,12 @@ img {
   box-sizing: border-box;
   margin-top: 1.5rem;
   border-radius: 4px;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 2.5rem;
   background-color: #c51010;
   color: #fafafa;
   font-weight: 600;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .events {
