@@ -13,3 +13,15 @@
     @content;
   }
 }
+
+@mixin button{
+  box-sizing: border-box;
+  margin-top: 1.5rem;
+  border-radius: 4px;
+  padding: 0.5rem 2.5rem;
+  background-color: $c-red;
+  color: $c-white;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}

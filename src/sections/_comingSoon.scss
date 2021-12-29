@@ -1,38 +1,35 @@
-.comingSoon {
-  background-color: black;
-  color: white;
-}
+@include desktop {
 
-.comingSoon h2 {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-}
+  .comingSoon {
+    background-color: $c-black;
+    color: $c-white;
+  }
 
-.comingSoonText {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 40px;
-}
+  .comingSoon h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
 
-.comingSoonText a {
-  box-sizing: border-box;
-  margin-top: 1.5rem;
-  border-radius: 4px;
-  padding: 0.5rem 2rem;
-  background-color: #c51010;
-  color: #fafafa;
-  font-weight: 600;
-  text-decoration: none;
-}
+  .comingSoonText {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 40px;
+  }
 
-.comingSoonImg {
-  display: flex;
-  justify-content: center;
-}
+  .comingSoonText a {
+    @include button
+    
+  }
 
-.comingSoonImg img {
-  height: 600px;
-  width: 600px;
+  .comingSoonImg {
+    display: flex;
+    justify-content: center;
+  }
+
+  .comingSoonImg img {
+    height: 600px;
+    width: 600px;
+  }
 }
