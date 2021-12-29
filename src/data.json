@@ -16,6 +16,10 @@
       "trailerUrl": "src/video/trailer1.avi",
       "imdbUrl": "https://www.imdb.com/title/tt14631498/?ref_=nv_sr_srsg_0",
       "imdbRating": "5",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
+      "originalLanguage": "Svenska",
       "performances": [
         {
           "saloonNr": 1,
@@ -107,6 +111,10 @@
       "trailerUrl": "src/video/trailer2.avi",
       "imdbUrl": "https://www.imdb.com/title/tt10872600/?ref_=nv_sr_srsg_0",
       "imdbRating": "9.0",
+      "originalLanguage": "Engelska",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": [
         {
           "saloonNr": 2,
@@ -144,6 +152,10 @@
       "trailerUrl": "src/video/trailer3.avi",
       "imdbUrl": "https://www.imdb.com/title/tt2382320/?ref_=nv_sr_srsg_0",
       "imdbRating": "7.4",
+      "originalLanguage": "Engelska",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": [
         {
           "saloonNr": 3,
@@ -235,6 +247,10 @@
       "trailerUrl": "src/video/trailer4.avi",
       "imdbUrl": "https://www.imdb.com/title/tt2953050/?ref_=nv_sr_srsg_0",
       "imdbRating": "7.6",
+      "originalLanguage": "Engelska",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": [
         {
           "saloonNr": 1,
@@ -326,6 +342,10 @@
       "trailerUrl": "src/video/trailer5.avi",
       "imdbUrl": "https://www.imdb.com/title/tt10838180/?ref_=nv_sr_srsg_0",
       "imdbRating": "6.9",
+      "originalLanguage": "Engelska",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": [
         {
           "saloonNr": 1,
@@ -414,10 +434,113 @@
       "screenImg2": "src/img/screens/screen6-2.jpg",
       "screenImg3": "src/img/screens/screen6-3.jpg",
       "coverImg": "src/img/covers/cover6.jpg",
-      "trailerUrl": "src/video/trailer5.avi",
-      "imdbUrl": "https://www.imdb.com/title/tt10838180/?ref_=nv_sr_srsg_0",
+      "trailerUrl": "src/video/trailer6.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt5834426/?ref_=fn_al_tt_1",
       "imdbRating": "TBD",
+      "originalLanguage": "Engelska",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
       "performances": []
+    },
+    {
+      "movieID": 7,
+      "movieTitle": "Uncharted",
+      "age": "TBD",
+      "genre": ["Action", "Äventyr"],
+      "description": "Den unge och gatusmarte Nathan Drake försöker hitta en gömd skatt tillsammans med sin partner Victor ”Sully” Sullivan. Duon ger sig ut på ett actionfyllt äventyr som utspelar sig över hela världen för att hitta ”den största skatten som aldrig hittats”, samtidigt som de följer ledtrådar för att hitta Nathans saknade bror.",
+      "duration": "TBD",
+      "release": "2022-02-16",
+      "bannerImg": "src/img/banner/banner-7.jpg",
+      "screenImg1": "src/img/screens/screen7-1.jpg",
+      "screenImg2": "src/img/screens/screen7-2.jpg",
+      "screenImg3": "src/img/screens/screen7-3.jpg",
+      "coverImg": "src/img/covers/cover7.jpg",
+      "trailerUrl": "src/video/trailer7.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt1464335/?ref_=nv_sr_srsg_0",
+      "imdbRating": "TBD",
+      "originalLanguage": "Engelska",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "performances": []
+    },
+    {
+      "movieID": 8,
+      "movieTitle": "The Batman",
+      "age": "TBD",
+      "genre": ["Action", "Drama"],
+      "description": "En seriemördare försöker locka in Gothams brottsbekämpare i ett spel att slå ursinnigt mot orättvisorna där de uppstår. Men i Batmans mörka siluett finns en genomträngande blick som metodiskt förstör leken för den undre världen. I The Batman återvänder vi till den ursprungliga legenden om playboy-miljonären med ett alterego som hämnare. Robert Pattinson, från 'Tenet' och 'Twilight', spelar titelrollen som Bruce Wayne/Batman och Jeffrey Wright ('Hunger Games') spelar kommissarie Gordon, Batmans inofficiella kontakt hos polisen.",
+      "duration": "TBD",
+      "release": "2022-03-02",
+      "bannerImg": "src/img/banner/banner-8.jpg",
+      "screenImg1": "src/img/screens/screen8-1.jpg",
+      "screenImg2": "src/img/screens/screen8-2.jpg",
+      "screenImg3": "src/img/screens/screen8-3.jpg",
+      "coverImg": "src/img/covers/cover8.jpg",
+      "trailerUrl": "src/video/trailer8.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt1877830/?ref_=nv_sr_srsg_0",
+      "imdbRating": "TBD",
+      "originalLanguage": "Engelska",
+      "director": "Elin Musk",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
+      "performances": []
+    },
+    {
+      "movieID": 9,
+      "movieTitle": "Lightyear",
+      "age": "TBD",
+      "genre": ["Action", "Animerat", "Familj", "Äventyr"],
+      "description": "En seriemördare försöker locka in Gothams brottsbekämpare i ett spel att slå ursinnigt mot orättvisorna där de uppstår. Men i Batmans mörka siluett finns en genomträngande blick som metodiskt förstör leken för den undre världen. I The Batman återvänder vi till den ursprungliga legenden om playboy-miljonären med ett alterego som hämnare. Robert Pattinson, från 'Tenet' och 'Twilight', spelar titelrollen som Bruce Wayne/Batman och Jeffrey Wright ('Hunger Games') spelar kommissarie Gordon, Batmans inofficiella kontakt hos polisen.",
+      "duration": "TBD",
+      "release": "2022-06-17",
+      "bannerImg": "src/img/banner/banner-9.jpg",
+      "screenImg1": "src/img/screens/screen9-1.jpg",
+      "screenImg2": "src/img/screens/screen9-2.jpg",
+      "screenImg3": "src/img/screens/screen9-3.jpg",
+      "coverImg": "src/img/covers/cover9.jpg",
+      "trailerUrl": "src/video/trailer9.avi",
+      "imdbUrl": "https://www.imdb.com/title/tt10298810/?ref_=nv_sr_srsg_0",
+      "imdbRating": "TBD",
+      "director": "Elin Musk",
+      "originalLanguage": "Engelska",
+      "actors": ["Indiana Jones", "Random Name", "Pål Isman", "John Doe", "Kevin Mitnick"],
+      "writers": ["The Mob", "Eminem", "Tom Hanks"],
+      "performances": []
+    }
+  ],
+  "events": [
+    {
+      "eventId": "e1",
+      "eventTitle": "Elon Musk signing",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "duration": "1h 33m 7s",
+      "eventDate": "2023-01-01",
+      "bannerImg": "src/img/event/event1.jpg"
+    },
+    {
+      "eventId": "e2",
+      "eventTitle": "Elon Musk talk",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "duration": "1h 33m 7s",
+      "eventDate": "2023-02-04",
+      "bannerImg": "src/img/event/event2.jpg"
+    },
+    {
+      "eventId": "e3",
+      "eventTitle": "Edward Bezos Q&A",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "duration": "1h 33m 7s",
+      "eventDate": "2023-03-11",
+      "bannerImg": "src/img/event/event3.jpg"
+    },
+    {
+      "eventId": "e4",
+      "eventTitle": "Elon Musk Q&A",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "duration": "1h 33m 7s",
+      "eventDate": "2023-05-21",
+      "bannerImg": "src/img/event/event4.jpg"
     }
   ]
 }

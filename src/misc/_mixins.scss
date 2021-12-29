@@ -1,0 +1,15 @@
+@mixin menu-link {
+  color: $c-white;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $c-red;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $bp-desktop) {
+    @content;
+  }
+}
