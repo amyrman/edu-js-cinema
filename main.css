@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 li {
@@ -81,7 +81,8 @@ img {
   box-shadow: 0 -150px 100px #100f0f inset;
   transition: background-image 1s ease-in-out;
 }
-.hero .heroContainer .heroPicPrev, .hero .heroContainer .heroPicNext {
+.hero .heroContainer .heroPicPrev,
+.hero .heroContainer .heroPicNext {
   position: absolute;
   top: calc(50% - 30px);
   font-size: 30px;
@@ -90,7 +91,8 @@ img {
   font-style: bold;
   padding: 5px 15px;
 }
-.hero .heroContainer .heroPicPrev:hover, .hero .heroContainer .heroPicNext:hover {
+.hero .heroContainer .heroPicPrev:hover,
+.hero .heroContainer .heroPicNext:hover {
   background-color: rgba(110, 108, 108, 0.6);
 }
 .hero .heroContainer .heroPicPrev {
@@ -128,7 +130,7 @@ img {
     color: #fafafa;
     font-weight: 600;
     text-decoration: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .comingSoonImg {
@@ -150,7 +152,7 @@ img {
 }
 
 .ftMovie .ftMovieContainer {
-  background-image: url("src/img/banner/banner-5.jpg");
+  background-image: url('src/img/banner/banner-5.jpg');
   background-position: top;
   background-size: cover;
   height: 25rem;
@@ -178,7 +180,7 @@ img {
   color: #fafafa;
   font-weight: 600;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .events {
@@ -214,6 +216,9 @@ img {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+  }
+  .events a {
+    text-decoration: none;
   }
   .events .eventContainer {
     width: 14rem;

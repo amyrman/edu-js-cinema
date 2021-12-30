@@ -13,8 +13,24 @@ const load = async() => {
       }
 }
 
+const loadEvents = async() => {
+  const url = 'src/data.json';
+      try {
+          const response = await fetch(url);
+          const data = await response.json();
+          const events = data.events;
+          return events;
+      } catch (error) {
+          console.log(error);
+      }
+}
+
 const render = async () => {
   const data = await load()
+  const eventsData = await loadEvents()
+
+  console.log('EVENTS LOADED')
+  console.log(eventsData)
 
   const eventsElement = document.querySelector('.events');
 
@@ -30,15 +46,15 @@ const render = async () => {
 
       const eventImage = document.createElement('div');
       eventImage.className = 'eventImage';
-      eventImage.style.backgroundImage = `url(${data[i].bannerImg})`
+      eventImage.style.backgroundImage = `url(${eventsData[i].bannerImg})`
 
       const eventDate = document.createElement('div');
       eventDate.className = 'eventDate';
       const eventDateFirstDiv = document.createElement('div');
-      eventDateFirstDiv.innerText = data[i].release.substring(10, 8);
+      eventDateFirstDiv.innerText = eventsData[i].eventDate.substring(10, 8);
       eventDate.appendChild(eventDateFirstDiv);
       const eventDateSecondDiv = document.createElement('div');
-      const movieMonth = data[i].release.substring(7, 5);
+      const movieMonth = eventsData[i].eventDate.substring(7, 5);
 
       switch(parseInt(movieMonth)) {
           case 1:
@@ -82,7 +98,7 @@ const render = async () => {
 
       const eventTitle = document.createElement('div');
       eventTitle.className = 'eventTitle';
-      eventTitle.innerText = data[i].movieTitle;
+      eventTitle.innerText = eventsData[i].eventTitle;
 
       eventContainer.appendChild(eventImage);
       eventImage.appendChild(eventDate);
@@ -91,6 +107,7 @@ const render = async () => {
       eventsContainer.appendChild(eventLink);
   }
 
+  console.log('MOVIES LOADED')
   console.log(data)
 }
 
@@ -113,8 +130,8 @@ const heroSlider = async () => {
   //Functions for next and previous slide
   const heroNextSlide = () => {
     slideIndex =
-      slideIndex < movies.length - 1 
-			? (slideIndex += 1) 
+      slideIndex < movies.length - 1
+			? (slideIndex += 1)
 			: (slideIndex = 0);
     heroContainer.style.backgroundImage = `url(${heroMovieBanner[slideIndex]})`;
   };
