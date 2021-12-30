@@ -4,7 +4,7 @@
 
 @media screen and (min-width: 960px) {
   .events {
-    background-color: $c-white;
+    background-color: $c-black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +13,7 @@
     height: 26rem;
     box-sizing: border-box;
     margin-bottom: 2rem;
+    color: $c-white;
 
     .eventsHeaderContainer {
       display: flex;
