@@ -55,13 +55,20 @@ img {
 @media screen and (min-width: 960px) {
   .header {
     background-color: #100f0f;
-  }
-  .header .headerNavMenu {
     display: flex;
-    justify-content: center;
   }
   .header li {
     padding: 2rem 3rem;
+  }
+  .header .headerLogo {
+    text-align: center;
+    align-self: center;
+    padding-left: 1.2rem;
+    padding-right: 4rem;
+  }
+  .header .headerNavMenu {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 

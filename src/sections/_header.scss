@@ -1,18 +1,27 @@
 .header {
+  
   a {
     @include menu-link;
     font-weight: bold;
   }
   @include desktop {
     background-color: $c-black;
-
-    .headerNavMenu {
-      display: flex;
-      justify-content: center;
-    }
+    display: flex;
 
     li {
       padding: 2rem 3rem;
+    }
+
+    .headerLogo {
+      text-align: center;
+      align-self: center;
+      padding-left: 1.2rem;
+      padding-right: 4rem;
+    }
+
+    .headerNavMenu {
+      display: flex;
+      justify-content:flex-end;
     }
   }
 }
