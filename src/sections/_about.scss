@@ -1,3 +1,15 @@
-.about{
-    background-color: coral;
+.aboutCovid {
+  @include desktop {
+    background-color: $c-black;
+    color: $c-white;
+    padding: 6rem;
+
+    h2 {
+      text-align: center;
+      padding: 1.3rem;
+    }
+    p {
+      line-height: 1.5em;
+    }
+  }
 }

@@ -148,8 +148,19 @@ img {
     width: 600px;
   }
 }
-.about {
-  background-color: coral;
+@media screen and (min-width: 960px) {
+  .aboutCovid {
+    background-color: #100f0f;
+    color: #fafafa;
+    padding: 6rem;
+  }
+  .aboutCovid h2 {
+    text-align: center;
+    padding: 1.3rem;
+  }
+  .aboutCovid p {
+    line-height: 1.5em;
+  }
 }
 
 .movieCards {
