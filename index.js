@@ -11,10 +11,14 @@ app.get('/', async (request, response) => {
   response.send(fileBuf);
 })
 
-app.get('*.css', async (request, response) => {
-  const fileBuf = await fs.readFile('./main.css');
-  response.type('css');
-  response.send(fileBuf)
-})
+
+app.get('/*', async (request, response) => {
+  const fileName = request.path;
+  const fileBuf = await fs.readFile(`./${fileName}`);
+  const type = fileName.split('.')[1];
+  response.type(type);
+  response.send(fileBuf);
+});
+
 
 app.listen(5080);
