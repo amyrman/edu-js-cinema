@@ -1,14 +1,26 @@
 {
   "name": "kino",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "Kino",
+  "main": "index.js",
+  "type": "module",
   "dependencies": {
+    "express": "^4.17.2",
     "sass": "^1.45.1"
   },
   "scripts": {
+    "dev": "nodemon .",
+    "start": "node .",
     "watch": "sass --watch src/main.scss main.css"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Emil Noren",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stratosfloor/kino.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stratosfloor/kino/issues"
+  },
+  "homepage": "https://github.com/stratosfloor/kino#readme"
 }
