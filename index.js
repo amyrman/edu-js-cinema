@@ -13,12 +13,18 @@ app.get('/', async (request, response) => {
 
 
 app.get('/*', async (request, response) => {
-  const fileName = request.path;
-  const fileBuf = await fs.readFile(`./${fileName}`);
-  const type = fileName.split('.')[1];
-  response.type(type);
-  response.send(fileBuf);
+  try {
+    const fileName = request.path;
+    const fileBuf = await fs.readFile(`./${fileName}`);
+    const type = fileName.split('.')[1];
+    response.type(type);
+    response.send(fileBuf);
+  }
+  catch (err) {
+    response.status(404).end();
+  }
 });
 
+// app.use(express.static('./'));
 
 app.listen(5080);
