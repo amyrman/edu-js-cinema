@@ -1,5 +1,6 @@
 import express from "express";
 import { engine } from "express-handlebars";
+import { loadAllMovies, loadMovie } from "./static/src/movies.js"
 
 
 const app = express();
@@ -17,11 +18,15 @@ app.get('/index', async (request, reponse) => {
 });
 
 app.get('/movies', async (request, response) => {
-  response.render('movies');
+  const movies = await loadAllMovies();
+  response.render('allMovies', { movies });
 }) 
 
+app.get('/movies/:Id', async (request, response) => {
+  const movie = await loadMovie(request.params.Id);
+  response.render('movie', { movie });
+})
 
 app.use('/', express.static('./static'));
-
 
 app.listen(5080);
