@@ -1,5 +1,12 @@
 console.log("Running..");
 
+window.onload = async () => {
+  if(!window.location.href.match('movies')) {
+    render();
+    heroSlider();
+  }
+}
+
 // Load data from API/DB
 const load = async() => {
   const url = 'src/data.json';
@@ -111,7 +118,7 @@ const render = async () => {
   console.log(data)
 }
 
-render();
+// render();
 
 
 const heroSlider = async () => {
@@ -159,4 +166,4 @@ const heroSlider = async () => {
 };
 
 
-heroSlider();
+// heroSlider();
