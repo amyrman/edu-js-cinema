@@ -15,6 +15,6 @@ app.get('/', async (request, response) => {
 
 
 app.use('/', express.static('./static'));
-// app.use('/', express.static('./static/img'));
+
 
 app.listen(5080);
