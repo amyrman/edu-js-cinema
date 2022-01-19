@@ -1,7 +1,6 @@
 import express from "express";
 import { engine } from "express-handlebars";
-import { loadAllMovies, loadMovie } from "./static/src/movies.js"
-
+import { loadAllMovies, loadMovie } from "./static/src/movies.js";
 
 const app = express();
 
@@ -28,7 +27,7 @@ const menu = [
   },
 ];
 
-const footerAdress = 'Kino på mars, Marsgatan 1337 ,42 121 31 MUSK HQ';
+const footerAdress = "Kino på mars, Marsgatan 1337 ,42 121 31 MUSK HQ";
 const footerSocial = [
   {
     label: "Instagram",
@@ -50,31 +49,32 @@ const footerSocial = [
     class: "fab fa-youtube",
     link: "",
   },
-]
+];
 
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
-app.set('views', './templates')
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
+app.set("views", "./templates");
 
 
-app.get('/', async (request, response) => {
-  response.render('index', { menu, footerAdress, footerSocial });
-})
-app.get('/index', async (request, response) => {
-  response.render('index', { menu, footerAdress, footerSocial });
+app.get("/", async (request, response) => {
+  response.render("index", { menu, footerAdress, footerSocial });
+});
+app.get("/index", async (request, response) => {
+  response.render("index", { menu, footerAdress, footerSocial });
 });
 
-app.get('/movies', async (request, response) => {
+app.get("/movies", async (request, response) => {
   const movies = await loadAllMovies();
-  response.render('allMovies', { movies });
-}) 
+  response.render("allMovies", {movies, menu, footerAdress, footerSocial});
+});
 
-app.get('/movies/:Id', async (request, response) => {
+app.get("/movies/:Id", async (request, response) => {
   const movie = await loadMovie(request.params.Id);
-  response.render('movie', { movie });
-})
+  movie
+    ? response.render("movie", { movie, menu, footerAdress, footerSocial })
+    : response.status(404); response.render("404", { menu, footerSocial, footerAdress });
+});
 
-app.use('/', express.static('./static'));
-
+app.use("/", express.static("./static"));
 
 app.listen(5080);
