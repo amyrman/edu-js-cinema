@@ -28,7 +28,29 @@ const menu = [
   },
 ];
 
-
+const footerAdress = 'Kino på mars, Marsgatan 1337 ,42 121 31 MUSK HQ';
+const footerSocial = [
+  {
+    label: "Instagram",
+    class: "fab fa-instagram",
+    link: "",
+  },
+  {
+    label: "Facebook",
+    class: "fab fa-facebook",
+    link: "",
+  },
+  {
+    label: "Twitter",
+    class: "fab fa-twitter-square",
+    link: "",
+  },
+  {
+    label: "Youtube",
+    class: "fab fa-youtube",
+    link: "",
+  },
+]
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
@@ -36,10 +58,10 @@ app.set('views', './templates')
 
 
 app.get('/', async (request, response) => {
-  response.render('index', { menu });
+  response.render('index', { menu, footerAdress, footerSocial });
 })
-app.get('/index', async (request, reponse) => {
-  reponse.render('index');
+app.get('/index', async (request, response) => {
+  response.render('index', { menu, footerAdress, footerSocial });
 });
 
 app.get('/movies', async (request, response) => {
