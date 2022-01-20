@@ -13,6 +13,7 @@
     "sass": "^1.45.1"
   },
   "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "dev": "nodemon .",
     "start": "node .",
     "watch": "sass --watch src/main.scss main.css"
@@ -28,6 +29,8 @@
   },
   "homepage": "https://github.com/stratosfloor/kino#readme",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   }
 }
