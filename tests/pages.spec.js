@@ -1,6 +1,8 @@
 import app from "../static/src/app.js";
 import request from "supertest";
 
+import { loadAllMovies, loadMovie } from "../static/src/movies.js";
+
 
 test('Test if main page is loading', async () => {
   const response = await request(app)
@@ -32,10 +34,11 @@ test('Test if not existing movie page is acessed', async () => {
     .expect(404);
 
   expect(response).toBeTruthy();
+  expect(response.text.includes('404')).toBeTruthy();
 });
 
 
-test('home page shows list of movies', async () => {
+test('All movies page shows list of movies', async () => {
   const response = await request(app)
     .get('/movies')
     .expect(200);
@@ -44,10 +47,25 @@ test('home page shows list of movies', async () => {
   expect(response.text.includes('Godfather')).toBeTruthy();
 });
 
-test('movie page shows movie details', async () => {
+test('Movie page shows movie details', async () => {
   const response = await request(app)
     .get('/movies/1')
     .expect(200);
 
   expect(response.text.includes('Shawshank')).toBeTruthy();
 });
+
+// Check if title is correct for all movies
+const movies = await loadAllMovies();
+for(let i = 0; i < movies.length; i++) {
+  const movieId = movies[i].id;
+  const movieTitle = movies[i].attributes.title;
+
+  test(`Movie page nr ${movieId} has corret title`, async () => {
+    const response = await request(app)
+      .get(`/movies/${movieId}`)
+      .expect(200);
+    
+    expect(response.text.includes(`<h1>${movieTitle}`)).toBeTruthy();
+  });
+};
