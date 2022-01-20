@@ -1,55 +1,9 @@
 import express from "express";
 import { engine } from "express-handlebars";
 import { loadAllMovies, loadMovie } from "./static/src/movies.js";
+import { kino } from "./static/src/kinoBuilds.js";
 
 const app = express();
-
-const menu = [
-  {
-    label: "Filmer",
-    link: "/movies",
-  },
-  {
-    label: "Kontakt",
-    link: "",
-  },
-  {
-    label: "Biljetter",
-    link: "",
-  },
-  {
-    label: "Om oss",
-    link: "",
-  },
-  {
-    label: "Events",
-    link: "",
-  },
-];
-
-const footerAdress = "Kino på mars, Marsgatan 1337 ,42 121 31 MUSK HQ";
-const footerSocial = [
-  {
-    label: "Instagram",
-    class: "fab fa-instagram",
-    link: "",
-  },
-  {
-    label: "Facebook",
-    class: "fab fa-facebook",
-    link: "",
-  },
-  {
-    label: "Twitter",
-    class: "fab fa-twitter-square",
-    link: "",
-  },
-  {
-    label: "Youtube",
-    class: "fab fa-youtube",
-    link: "",
-  },
-];
 
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
@@ -57,22 +11,22 @@ app.set("views", "./templates");
 
 
 app.get("/", async (request, response) => {
-  response.render("index", { menu, footerAdress, footerSocial });
+  response.render("index", { kino });
 });
 app.get("/index", async (request, response) => {
-  response.render("index", { menu, footerAdress, footerSocial });
+  response.render("index", { kino });
 });
 
 app.get("/movies", async (request, response) => {
   const movies = await loadAllMovies();
-  response.render("allMovies", {movies, menu, footerAdress, footerSocial});
+  response.render("allMovies", {movies, kino});
 });
 
 app.get("/movies/:Id", async (request, response) => {
   const movie = await loadMovie(request.params.Id);
   movie
-    ? response.render("movie", { movie, menu, footerAdress, footerSocial })
-    : response.status(404); response.render("404", { menu, footerSocial, footerAdress });
+    ? response.render("movie", { movie, kino })
+    : response.status(404); response.render("404", { kino });
 });
 
 app.use("/", express.static("./static"));

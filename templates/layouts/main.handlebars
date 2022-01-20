@@ -20,7 +20,7 @@
         <p style="color: white">PÅ MARS</p></a></div>
       <nav class="headerNav">
         <ul class="headerNavMenu">
-          {{#each menu}}
+          {{#each kino.menu}}
           <li>
             <a href="{{ this.link }}">{{ this.label }}</a>
           </li>
@@ -33,15 +33,15 @@
     </main>
     <div class="footer">
       <div class="footerLinks">
-          {{#each menu}}
+          {{#each kino.menu}}
           <li>
             <a href="{{ this.link }}">{{ this.label }}</a>
           </li>
           {{/each}}
       </div>
-      <p class="adress">{{ footerAdress }}</p>
+      <p class="adress">{{ kino.adress }}</p>
       <ul class="socialMedia">
-        {{#each footerSocial}}
+        {{#each kino.social}}
         <li class="{{ this.class }}"></li>
         {{/each}}
       </ul>
