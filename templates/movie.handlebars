@@ -1,6 +1,6 @@
 <div class="moviePage">
   <h1>{{movie.attributes.title}}</h1>
-  <p>{{movie.attributes.intro}}</p>
+  {{{ markdown movie.attributes.intro }}}
   <img
     src="{{movie.attributes.image.url}}"
     alt="{{movie.attributes.title}}"
