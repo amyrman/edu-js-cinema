@@ -273,8 +273,16 @@ img {
   background-color: darkkhaki;
 }
 
-.allMovies-movies {
-  background-color: deeppink;
+.movies {
+  margin: 0 auto;
+  width: fit-content;
+  margin: 3rem;
+  text-align: center;
+}
+.movies a {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.25em;
 }
 
 .allMovies-footer {
