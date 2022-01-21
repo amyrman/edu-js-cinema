@@ -1,0 +1,25 @@
+.moviePage {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  .movieMeta {
+    grid-column: 4 / 8;
+    margin-bottom: 1em;
+    h1 {
+      font-size: 2rem;
+    }
+    .imdbBtn {
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  
+  }
+
+  img {
+    grid-column: 9 / 12;
+    size: 100%;
+  }
+}

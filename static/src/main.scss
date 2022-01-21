@@ -10,6 +10,9 @@
 @import 'sections/ftMovie';
 @import 'sections/events';
 
+//specifik movie template
+@import 'sections/movie.scss';
+
 //allMovies-propertys
 @import 'sections/allMovies/allMovies-header';
 @import 'sections/allMovies/allMovies-movies';

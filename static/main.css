@@ -269,6 +269,29 @@ img {
     font-weight: 500;
   }
 }
+.moviePage {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.moviePage .movieMeta {
+  grid-column: 4/8;
+  margin-bottom: 1em;
+}
+.moviePage .movieMeta h1 {
+  font-size: 2rem;
+}
+.moviePage .movieMeta .imdbBtn {
+  margin-bottom: 1em;
+}
+.moviePage .movieMeta p {
+  font-size: 1.2rem;
+}
+.moviePage img {
+  grid-column: 9/12;
+  size: 100%;
+}
+
 .allMovies-header {
   background-color: darkkhaki;
 }
