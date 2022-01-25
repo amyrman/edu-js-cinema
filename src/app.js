@@ -3,6 +3,7 @@ import { engine } from "express-handlebars";
 import { loadAllMovies, loadMovie } from "./movies.js";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
+import getUpcomingScreenings from './screenings.js'
 
 const app = express();
 
@@ -32,6 +33,21 @@ app.get("/movies/:Id", async (request, response) => {
   movie
     ? response.render("movie", { movie, kino })
     : response.status(404).render("404", { kino });
+});
+
+app.get('/screenings', async (request, response) => {
+
+  try {
+    const screeningsData = await getUpcomingScreenings();
+    const jsonObj = {
+      data: screeningsData
+    }
+    const jsonData = JSON.stringify(jsonObj)
+
+    response.json(JSON.parse(jsonData));
+  } catch (error) {
+    console.log(error)
+  }
 });
 
 app.use("/", express.static("./static"));
