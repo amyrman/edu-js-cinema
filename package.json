@@ -16,7 +16,7 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "dev": "nodemon .",
     "start": "node .",
-    "watch": "sass --watch static/src/main.scss static/main.css"
+    "watch": "sass --watch src/main.scss static/main.css"
   },
   "author": "Emil Noren",
   "license": "ISC",

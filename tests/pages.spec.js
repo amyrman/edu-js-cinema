@@ -1,7 +1,7 @@
-import app from "../static/src/app.js";
+import app from "../src/app.js";
 import request from "supertest";
 
-import { loadAllMovies, loadMovie } from "../static/src/movies.js";
+import { loadAllMovies, loadMovie } from "../src/movies.js";
 
 
 test('Test if main page is loading', async () => {
@@ -61,7 +61,7 @@ for(let i = 0; i < movies.length; i++) {
   const movieId = movies[i].id;
   const movieTitle = movies[i].attributes.title;
 
-  test(`Movie page nr ${movieId} has corret title`, async () => {
+  test(`Movie page nr ${movieId} has correct title`, async () => {
     const response = await request(app)
       .get(`/movies/${movieId}`)
       .expect(200);

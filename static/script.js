@@ -9,7 +9,7 @@ window.onload = async () => {
 
 // Load data from API/DB
 const load = async() => {
-  const url = 'src/data.json';
+  const url = 'data.json';
       try {
           const response = await fetch(url);
           const data = await response.json();
@@ -21,7 +21,7 @@ const load = async() => {
 }
 
 const loadEvents = async() => {
-  const url = 'src/data.json';
+  const url = 'data.json';
       try {
           const response = await fetch(url);
           const data = await response.json();
