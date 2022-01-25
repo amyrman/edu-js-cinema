@@ -1,3 +1,4 @@
+
 console.log("Running..");
 
 // Load screenings from API
@@ -103,6 +104,19 @@ const loadEvents = async() => {
           console.log(error);
       }
 }
+
+const loadScreenings = async () => {
+  const url = '/screenings';
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data.data)
+  } catch (error) {
+    console.log(error)
+  }
+};
+
+loadScreenings();
 
 const createScreeningCards = (screening, screeningsListEl) => {
   const startDate = screening.start_time.substring(10,0);
