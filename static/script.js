@@ -26,6 +26,7 @@ const loadEvents = async() => {
       }
 }
 
+// Load screenings data from API
 const loadScreenings = async () => {
   const url = '/screenings';
   try {
@@ -37,14 +38,16 @@ const loadScreenings = async () => {
   }
 };
 
-loadScreenings();
-
 const createScreeningCards = (screening, screeningsListEl) => {
   const startDate = screening.start_time.substring(10,0);
   const startTime = screening.start_time.substring(11, 16)
 
-  const screeningCard = document.createElement('li');
+  const screeningCardContainer = document.createElement('li');
+  screeningCardContainer.classList.add('screeningCardContainer');
+
+  const screeningCard = document.createElement('a');
   screeningCard.classList.add('screeningCard');
+  screeningCard.href = '#';
 
   const screeningCardMovieImage = document.createElement('div');
   screeningCardMovieImage.classList.add('screeningCardMovieImage');
@@ -70,7 +73,8 @@ const createScreeningCards = (screening, screeningsListEl) => {
   screeningCardInformation.appendChild(screeningCardMovieRoom);
   screeningCardInformation.appendChild(screeningCardMovieTime);
   screeningCard.appendChild(screeningCardInformation);
-  screeningsListEl.appendChild(screeningCard);
+  screeningCardContainer.appendChild(screeningCard);
+  screeningsListEl.appendChild(screeningCardContainer);
 }
 
 const render = async () => {

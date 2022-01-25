@@ -173,13 +173,13 @@ img {
   background-color: #100f0f;
 }
 .screeningsCards .screeningsCardsLeft {
-  width: 40%;
+  width: 30%;
 }
 .screeningsCards .screeningsCardsLeft .screeningsListLeft {
   width: 100%;
 }
 .screeningsCards .screeningsCardsRight {
-  width: 40%;
+  width: 30%;
 }
 .screeningsCards .screeningsCardsRight .screeningsListRight {
   width: 100%;

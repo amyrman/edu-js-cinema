@@ -36,14 +36,12 @@ app.get("/movies/:Id", async (request, response) => {
 });
 
 app.get('/screenings', async (request, response) => {
-
   try {
     const screeningsData = await getUpcomingScreenings();
     const jsonObj = {
       data: screeningsData
     }
     const jsonData = JSON.stringify(jsonObj)
-
     response.json(JSON.parse(jsonData));
   } catch (error) {
     console.log(error)
