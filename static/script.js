@@ -78,10 +78,6 @@ const getUpcomingScreenings = async () => {
   return filterByUpomingScreenings(trimedData, 5);
 };
 
-const screeningsData = await getUpcomingScreenings();
-console.log(screeningsData);
-
-
 // Load movies data from API/DB
 const load = async() => {
   const url = 'data.json';
@@ -111,6 +107,9 @@ const loadEvents = async() => {
 const render = async () => {
   const data = await load()
   const eventsData = await loadEvents()
+
+  const screeningsData = await getUpcomingScreenings();
+  console.log(screeningsData);
 
   // console.log('EVENTS LOADED')
   // console.log(eventsData)
@@ -189,6 +188,59 @@ const render = async () => {
       eventLink.appendChild(eventContainer);
       eventsContainer.appendChild(eventLink);
   }
+
+  const screeningsContainer = document.querySelector('.screeningsCards');
+
+  const screeningsLeft = document.createElement('div');
+  screeningsLeft.classList.add('screeningsCardsLeft');
+  const screeningsListLeft = document.createElement('ul');
+  screeningsListLeft.classList.add('screeningsListLeft');
+
+  screeningsData.splice(5, 5).forEach((screening) => {
+    const startDate = screening.start_time.substring(10,0);
+    const startTime = screening.start_time.substring(11, 16)
+
+    const screeningCard = document.createElement('li');
+    screeningCard.classList.add('screeningCard');
+
+    const screeningCardMovieImage = document.createElement('div');
+    screeningCardMovieImage.classList.add('screeningCardMovieImage');
+    screeningCardMovieImage.style.backgroundImage = `url(${screening.image})`
+
+    const screeningCardInformation = document.createElement('div');
+    screeningCardInformation.classList.add('screeningCardInformation');
+
+    const screeningCardMovieTitle = document.createElement('p');
+    screeningCardMovieTitle.classList.add('screeningCardMovieTitle');
+    screeningCardMovieTitle.innerHTML = screening.title;
+
+    const screeningCardMovieRoom = document.createElement('p');
+    screeningCardMovieRoom.classList.add('screeningCardMovieRoom');
+    screeningCardMovieRoom.innerHTML = `Salong: ${screening.room}`;
+
+    const screeningCardMovieTime = document.createElement('p');
+    screeningCardMovieTime.classList.add('screeningCardMovieTime');
+    screeningCardMovieTime.innerHTML = `Tid: ${startDate} - ${startTime}`;
+
+    screeningCard.appendChild(screeningCardMovieImage);
+    screeningCardInformation.appendChild(screeningCardMovieTitle);
+    screeningCardInformation.appendChild(screeningCardMovieRoom);
+    screeningCardInformation.appendChild(screeningCardMovieTime);
+    screeningCard.appendChild(screeningCardInformation);
+    screeningsListLeft.appendChild(screeningCard);
+  })
+
+  const screeningsRight = document.createElement('div');
+  screeningsRight.classList.add('screeningsCardsRight');
+  const screeningsListRight = document.createElement('ul');
+  screeningsListRight.classList.add('screeningsListRight');
+
+
+  screeningsContainer.appendChild(screeningsLeft);
+  screeningsContainer.appendChild(screeningsRight);
+  screeningsLeft.appendChild(screeningsListLeft);
+  screeningsRight.appendChild(screeningsListRight);
+
 
   // console.log('MOVIES LOADED')
   // console.log(data)

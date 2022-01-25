@@ -164,7 +164,26 @@ img {
 }
 
 .screeningsCards {
+  display: flex;
+  flex-direction: row;
   background-color: red;
+  width: 100%;
+}
+.screeningsCards .screeningsCardsLeft {
+  background-color: green;
+  width: 50%;
+  height: 20rem;
+}
+.screeningsCards .screeningsCardsLeft .screeningsListLeft {
+  width: 100%;
+}
+.screeningsCards .screeningsCardsRight {
+  background-color: blue;
+  width: 50%;
+  height: 20rem;
+}
+.screeningsCards .screeningsCardsRight .screeningsListRight {
+  width: 100%;
 }
 
 .ftMovie .ftMovieContainer {
