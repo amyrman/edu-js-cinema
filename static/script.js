@@ -210,7 +210,7 @@ const render = async () => {
     const screeningCardInformation = document.createElement('div');
     screeningCardInformation.classList.add('screeningCardInformation');
 
-    const screeningCardMovieTitle = document.createElement('p');
+    const screeningCardMovieTitle = document.createElement('h3');
     screeningCardMovieTitle.classList.add('screeningCardMovieTitle');
     screeningCardMovieTitle.innerHTML = screening.title;
 
@@ -228,7 +228,7 @@ const render = async () => {
     screeningCardInformation.appendChild(screeningCardMovieTime);
     screeningCard.appendChild(screeningCardInformation);
     screeningsListLeft.appendChild(screeningCard);
-  })
+  });
 
   const screeningsRight = document.createElement('div');
   screeningsRight.classList.add('screeningsCardsRight');

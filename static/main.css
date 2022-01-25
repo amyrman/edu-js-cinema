@@ -166,24 +166,33 @@ img {
 .screeningsCards {
   display: flex;
   flex-direction: row;
-  background-color: red;
+  justify-content: center;
   width: 100%;
 }
 .screeningsCards .screeningsCardsLeft {
   background-color: green;
-  width: 50%;
-  height: 20rem;
+  width: 40%;
 }
 .screeningsCards .screeningsCardsLeft .screeningsListLeft {
   width: 100%;
 }
 .screeningsCards .screeningsCardsRight {
   background-color: blue;
-  width: 50%;
-  height: 20rem;
+  width: 40%;
 }
 .screeningsCards .screeningsCardsRight .screeningsListRight {
   width: 100%;
+}
+.screeningsCards .screeningCard {
+  display: flex;
+  flex-direction: row;
+}
+.screeningsCards .screeningCardMovieImage {
+  height: 5rem;
+  width: 3rem;
+  margin: 0.2rem 0.5rem;
+  background-position: center;
+  background-size: contain;
 }
 
 .ftMovie .ftMovieContainer {

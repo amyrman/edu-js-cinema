@@ -1,13 +1,12 @@
 .screeningsCards {
   display: flex;
   flex-direction: row;
-  background-color: red;
+  justify-content: center;
   width: 100%;
 
   .screeningsCardsLeft {
     background-color: green;
-    width: 50%;
-    height: 20rem;
+    width: 40%;
 
     .screeningsListLeft {
       width: 100%;
@@ -16,11 +15,24 @@
 
   .screeningsCardsRight {
     background-color: blue;
-    width: 50%;
-    height: 20rem;
+    width: 40%;
 
     .screeningsListRight {
       width: 100%;
     }
+  }
+
+  .screeningCard {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .screeningCardMovieImage {
+    height: 5rem;
+    width: 3rem;
+    margin: 0.2rem 0.5rem;
+
+    background-position: center;
+    background-size: contain;
   }
 }
