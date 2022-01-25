@@ -1,7 +1,7 @@
 console.log("Running..");
 
 window.onload = async () => {
-  if(!window.location.href.match('movies')) {
+  if(window.location.href.match('/')) {
     render();
     heroSlider();
   }
