@@ -168,7 +168,7 @@ img {
 }
 
 .ftMovie .ftMovieContainer {
-  background-image: url("src/img/banner/banner-5.jpg");
+  background-image: url("img/banner/banner-5.jpg");
   background-position: top;
   background-size: cover;
   height: 25rem;
