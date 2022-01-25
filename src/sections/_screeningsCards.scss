@@ -3,9 +3,12 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  padding: 1rem 0;
+
+  color: $c-white;
+  background-color: $c-black;
 
   .screeningsCardsLeft {
-    background-color: green;
     width: 40%;
 
     .screeningsListLeft {
@@ -14,7 +17,6 @@
   }
 
   .screeningsCardsRight {
-    background-color: blue;
     width: 40%;
 
     .screeningsListRight {
@@ -25,11 +27,12 @@
   .screeningCard {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   .screeningCardMovieImage {
     height: 5rem;
-    width: 3rem;
+    width: 3.5rem;
     margin: 0.2rem 0.5rem;
 
     background-position: center;

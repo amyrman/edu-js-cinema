@@ -104,6 +104,40 @@ const loadEvents = async() => {
       }
 }
 
+const createScreeningCards = (screening, screeningsListEl) => {
+  const startDate = screening.start_time.substring(10,0);
+  const startTime = screening.start_time.substring(11, 16)
+
+  const screeningCard = document.createElement('li');
+  screeningCard.classList.add('screeningCard');
+
+  const screeningCardMovieImage = document.createElement('div');
+  screeningCardMovieImage.classList.add('screeningCardMovieImage');
+  screeningCardMovieImage.style.backgroundImage = `url(${screening.image})`
+
+  const screeningCardInformation = document.createElement('div');
+  screeningCardInformation.classList.add('screeningCardInformation');
+
+  const screeningCardMovieTitle = document.createElement('h3');
+  screeningCardMovieTitle.classList.add('screeningCardMovieTitle');
+  screeningCardMovieTitle.innerHTML = screening.title;
+
+  const screeningCardMovieRoom = document.createElement('p');
+  screeningCardMovieRoom.classList.add('screeningCardMovieRoom');
+  screeningCardMovieRoom.innerHTML = `Salong: ${screening.room}`;
+
+  const screeningCardMovieTime = document.createElement('p');
+  screeningCardMovieTime.classList.add('screeningCardMovieTime');
+  screeningCardMovieTime.innerHTML = `Tid: ${startDate} - ${startTime}`;
+
+  screeningCard.appendChild(screeningCardMovieImage);
+  screeningCardInformation.appendChild(screeningCardMovieTitle);
+  screeningCardInformation.appendChild(screeningCardMovieRoom);
+  screeningCardInformation.appendChild(screeningCardMovieTime);
+  screeningCard.appendChild(screeningCardInformation);
+  screeningsListEl.appendChild(screeningCard);
+}
+
 const render = async () => {
   const data = await load()
   const eventsData = await loadEvents()
@@ -196,45 +230,18 @@ const render = async () => {
   const screeningsListLeft = document.createElement('ul');
   screeningsListLeft.classList.add('screeningsListLeft');
 
-  screeningsData.splice(5, 5).forEach((screening) => {
-    const startDate = screening.start_time.substring(10,0);
-    const startTime = screening.start_time.substring(11, 16)
-
-    const screeningCard = document.createElement('li');
-    screeningCard.classList.add('screeningCard');
-
-    const screeningCardMovieImage = document.createElement('div');
-    screeningCardMovieImage.classList.add('screeningCardMovieImage');
-    screeningCardMovieImage.style.backgroundImage = `url(${screening.image})`
-
-    const screeningCardInformation = document.createElement('div');
-    screeningCardInformation.classList.add('screeningCardInformation');
-
-    const screeningCardMovieTitle = document.createElement('h3');
-    screeningCardMovieTitle.classList.add('screeningCardMovieTitle');
-    screeningCardMovieTitle.innerHTML = screening.title;
-
-    const screeningCardMovieRoom = document.createElement('p');
-    screeningCardMovieRoom.classList.add('screeningCardMovieRoom');
-    screeningCardMovieRoom.innerHTML = `Salong: ${screening.room}`;
-
-    const screeningCardMovieTime = document.createElement('p');
-    screeningCardMovieTime.classList.add('screeningCardMovieTime');
-    screeningCardMovieTime.innerHTML = `Tid: ${startDate} - ${startTime}`;
-
-    screeningCard.appendChild(screeningCardMovieImage);
-    screeningCardInformation.appendChild(screeningCardMovieTitle);
-    screeningCardInformation.appendChild(screeningCardMovieRoom);
-    screeningCardInformation.appendChild(screeningCardMovieTime);
-    screeningCard.appendChild(screeningCardInformation);
-    screeningsListLeft.appendChild(screeningCard);
+  screeningsData.splice(0, 5).forEach((screening) => {
+    createScreeningCards(screening, screeningsListLeft);
   });
 
-  const screeningsRight = document.createElement('div');
+    const screeningsRight = document.createElement('div');
   screeningsRight.classList.add('screeningsCardsRight');
   const screeningsListRight = document.createElement('ul');
   screeningsListRight.classList.add('screeningsListRight');
 
+  screeningsData.forEach((screening) => {
+    createScreeningCards(screening, screeningsListRight)
+  });
 
   screeningsContainer.appendChild(screeningsLeft);
   screeningsContainer.appendChild(screeningsRight);

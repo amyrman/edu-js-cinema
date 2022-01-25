@@ -168,16 +168,17 @@ img {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  padding: 1rem 0;
+  color: #fafafa;
+  background-color: #100f0f;
 }
 .screeningsCards .screeningsCardsLeft {
-  background-color: green;
   width: 40%;
 }
 .screeningsCards .screeningsCardsLeft .screeningsListLeft {
   width: 100%;
 }
 .screeningsCards .screeningsCardsRight {
-  background-color: blue;
   width: 40%;
 }
 .screeningsCards .screeningsCardsRight .screeningsListRight {
@@ -186,10 +187,11 @@ img {
 .screeningsCards .screeningCard {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .screeningsCards .screeningCardMovieImage {
   height: 5rem;
-  width: 3rem;
+  width: 3.5rem;
   margin: 0.2rem 0.5rem;
   background-position: center;
   background-size: contain;
