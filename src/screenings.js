@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 const API_BASEURL =
-  'https://lernia-kino-cms.herokuapp.com/api/screenings?populate=movie';
+  'https://lernia-kino-cms.herokuapp.com/api/screenings?populate=movie&pagination[pageSize]=1500';
 
 const trimData = (screening) => {
   return {
