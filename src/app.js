@@ -1,6 +1,6 @@
 import express from "express";
 import { engine } from "express-handlebars";
-import { loadAllMovies, loadMovie } from "./movies.js";
+import { loadAllMovies, loadMovie, loadReviews } from "./movies.js";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
 
@@ -33,6 +33,10 @@ app.get("/movies/:Id", async (request, response) => {
     ? response.render("movie", { movie, kino })
     : response.status(404).render("404", { kino });
 });
+
+app.get("/api/reviews", async (request, response) => {
+  response.json(await loadReviews());
+})
 
 app.use("/", express.static("./static"));
 
