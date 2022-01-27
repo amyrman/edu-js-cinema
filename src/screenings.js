@@ -3,14 +3,17 @@ import fetch from 'node-fetch';
 const API_BASEURL =
   'https://lernia-kino-cms.herokuapp.com/api/screenings?populate=movie&pagination[pageSize]=1500';
 
-const trimData = (screening) => {
-  return {
-    id: screening.id,
-    title: screening.attributes.movie.data.attributes.title,
-    movieId: screening.attributes.movie.data.id,
-    image: screening.attributes.movie.data.attributes.image.url,
-    start_time: screening.attributes.start_time,
-  };
+export function trimData (screeningsArray) {
+  const trimmedArr = screeningsArray.map((screening) => {
+    return {
+      id: screening.id,
+      title: screening.attributes.movie.data.attributes.title,
+      movieId: screening.attributes.movie.data.id,
+      image: screening.attributes.movie.data.attributes.image.url,
+      start_time: screening.attributes.start_time,
+    };
+  });
+  return trimmedArr;
 };
 
 const filterOldScreenings = (screenings, todaysDate) => {
@@ -48,7 +51,7 @@ const sortScreeningsByDate = (screenings) => {
   return sortedScreenings;
 };
 
-const filterByUpomingScreenings = (arr, days) => {
+export const filterByUpomingScreenings = (arr, days) => {
   const todaysDate = new Date();
   const ms = new Date().getTime() + 86400000 * days;
   const futureDate = new Date(ms);
@@ -67,13 +70,12 @@ const filterByUpomingScreenings = (arr, days) => {
   return sortedAndFilteredScreenings.splice(0, 10);
 };
 
-const getUpcomingScreenings = async () => {
+export async function getUpcomingScreenings() {
   const dataBuff = await fetch(API_BASEURL);
   const data = await dataBuff.json();
   const screeningsData = await data.data;
 
-  const trimedData = screeningsData.map((screening) => trimData(screening));
-  return filterByUpomingScreenings(trimedData, 5);
+  const trimedData = trimData(screeningsData);
+  const filteredData = filterByUpomingScreenings(trimedData, 5);
+  return filteredData;
 };
-
-export default getUpcomingScreenings;
