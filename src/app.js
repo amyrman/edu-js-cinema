@@ -35,7 +35,7 @@ app.get("/movies/:Id", async (request, response) => {
     : response.status(404).render("404", { kino });
 });
 
-app.get('/screenings', async (request, response) => {
+app.get('/api/screenings', async (request, response) => {
   try {
     const screeningsData = await getUpcomingScreenings();
     const jsonObj = {

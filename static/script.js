@@ -28,7 +28,7 @@ const loadEvents = async() => {
 
 // Load screenings data from API
 const loadScreenings = async () => {
-  const url = '/screenings';
+  const url = '/api/screenings';
   try {
     const response = await fetch(url);
     const data = await response.json();
@@ -47,7 +47,7 @@ const createScreeningCards = (screening, screeningsListEl) => {
 
   const screeningCard = document.createElement('a');
   screeningCard.classList.add('screeningCard');
-  screeningCard.href = '#';
+  screeningCard.href = `/movies/${screening.movieId}`;
 
   const screeningCardMovieImage = document.createElement('div');
   screeningCardMovieImage.classList.add('screeningCardMovieImage');

@@ -9,7 +9,7 @@ const trimData = (screening) => {
     title: screening.attributes.movie.data.attributes.title,
     movieId: screening.attributes.movie.data.id,
     image: screening.attributes.movie.data.attributes.image.url,
-    ...screening.attributes,
+    start_time: screening.attributes.start_time,
   };
 };
 
