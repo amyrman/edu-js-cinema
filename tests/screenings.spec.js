@@ -1,16 +1,31 @@
-import {trimData} from '../src/screenings.js'
+import {jest} from '@jest/globals'
+import { trimData } from '../src/screenings.js'
 
-test('If array gets trimmed down to id, title, start_time, movieId and image', async () => {
-  const screeningsArray = data;
-  const trimmedDataObj = await trimData(screeningsArray);
-  console.log(trimmedDataObj.splice(0, 10));
+// Mock Date
+beforeEach(() => {
+  jest.useFakeTimers();
+  jest.setSystemTime(new Date(2022, 0, 27).getTime())
+});
 
-  expect(trimmedDataObj[0].id).toBeTruthy();
-  expect(trimmedDataObj[0].title).toBeTruthy();
-  expect(trimmedDataObj[0].start_time).toBeTruthy();
-  expect(trimmedDataObj[0].movieId).toBeTruthy();
-  expect(trimmedDataObj[0].image).toBeTruthy();
-})
+afterEach(() => {
+  jest.clearAllTimers();
+});
+
+test('If array gets trimmed down to id, title, start_time, movieId, room and image', async () => {
+  const screeningsArray = data.splice(0, 10);
+  const trimmedDataArray = await trimData(screeningsArray);
+
+  trimmedDataArray.forEach((screening) => {
+      expect(screening.id).toBeTruthy();
+      expect(screening.title).toBeTruthy();
+      expect(screening.start_time).toBeTruthy();
+      expect(screening.movieId).toBeTruthy();
+      expect(screening.image).toBeTruthy();
+      expect(screening.room).toBeTruthy();
+    });
+  });
+
+
 
 
 

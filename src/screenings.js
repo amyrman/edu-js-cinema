@@ -11,12 +11,13 @@ export function trimData (screeningsArray) {
       movieId: screening.attributes.movie.data.id,
       image: screening.attributes.movie.data.attributes.image.url,
       start_time: screening.attributes.start_time,
+      room: screening.attributes.room
     };
   });
   return trimmedArr;
 };
 
-const filterOldScreenings = (screenings, todaysDate) => {
+export function filterOldScreenings (screenings, todaysDate) {
   const upcomingScreenings = screenings.filter((screening) => {
     if (Date.parse(screening.start_time) > Date.parse(todaysDate)) {
       return screening;
@@ -25,7 +26,7 @@ const filterOldScreenings = (screenings, todaysDate) => {
   return upcomingScreenings;
 };
 
-const filterNextFiveDaysScreenings = (screenings, futureDate) => {
+export function filterNextFiveDaysScreenings (screenings, futureDate) {
   const filteredScreenings = screenings.filter((screening) => {
     if (Date.parse(screening.start_time) < Date.parse(futureDate)) {
       return screening;
