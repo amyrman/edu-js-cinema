@@ -1,5 +1,9 @@
 import { jest } from '@jest/globals';
-import { trimData, filterOldScreenings } from '../src/screenings.js';
+import {
+  trimData,
+  filterOldScreenings,
+  filterNextFiveDaysScreenings,
+} from '../src/screenings.js';
 
 // Mock Date
 beforeEach(() => {
@@ -32,6 +36,22 @@ test('If old screenings are removed from array', async () => {
 
   filteredScreenings.forEach((screening) => {
     expect(Date.parse(screening.start_time) > Date.parse(date));
+  });
+});
+
+test('If only screenings five days ahead is in the array', async () => {
+  const date = new Date();
+  const ms = new Date().getTime() + 86400000 * 5;
+  const futureDate = new Date(ms);
+  const screeningsArray = await filterOldScreenings(trimData(data), date);
+
+  const futureScreenings = filterNextFiveDaysScreenings(
+    screeningsArray,
+    futureDate
+  );
+
+  futureScreenings.forEach((screening) => {
+    expect(Date.parse(screening.start_time) < Date.parse(futureDate));
   });
 });
 
