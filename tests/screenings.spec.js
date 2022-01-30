@@ -35,7 +35,7 @@ test('If old screenings are removed from array', async () => {
   const filteredScreenings = filterOldScreenings(screeningsArray, date);
 
   filteredScreenings.forEach((screening) => {
-    expect(Date.parse(screening.start_time) > Date.parse(date));
+    expect(Date.parse(screening.start_time) > Date.parse(date)).toBeTruthy();
   });
 });
 
@@ -51,7 +51,9 @@ test('If only screenings five days ahead is in the array', async () => {
   );
 
   futureScreenings.forEach((screening) => {
-    expect(Date.parse(screening.start_time) < Date.parse(futureDate));
+    expect(
+      Date.parse(screening.start_time) < Date.parse(futureDate)
+    ).toBeTruthy();
   });
 });
 
