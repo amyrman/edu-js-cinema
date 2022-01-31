@@ -23,8 +23,16 @@
       </script>
       {{! ---------------------}}
     </div>
-    {{{markdown movie.attributes.intro}}}
+    {{{ movie.attributes.intro}}}
   </div>
   <img src="{{movie.attributes.image.url}}" />
 
 </div>
+
+<div id="screenings">
+  <h2>Kommande visningar</h2>
+  <ul id="screeningsList">
+  </ul>
+</div>
+<script src="/../screening.js"></script>
+<script src="/../movie.js"></script>

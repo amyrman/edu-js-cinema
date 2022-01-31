@@ -1,10 +1,14 @@
 import express from "express";
 import { engine } from "express-handlebars";
-import { loadAllMovies, loadMovie } from "./movies.js";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
+import api from "./movies.js";
+import { getScreenings } from "./screenings.js";
+
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.engine("handlebars", engine({
   helpers: {
@@ -23,15 +27,32 @@ app.get("/index", async (request, response) => {
 });
 
 app.get("/movies", async (request, response) => {
-  const movies = await loadAllMovies();
+  const movies = await api.loadAllMovies();
   response.render("allMovies", {movies, kino});
 });
 
-app.get("/movies/:Id", async (request, response) => {
-  const movie = await loadMovie(request.params.Id);
+app.get("/movies/:movieId", async (request, response) => {
+  const movie = await api.loadMovie(request.params.movieId);
+  const reviews = await api.loadReviews(request.params.movieId);
   movie
-    ? response.render("movie", { movie, kino })
+    ? response.render("movie", { movie, reviews, kino })
     : response.status(404).render("404", { kino });
+});
+
+
+app.get("/api/screenings", async (request, response) => {
+  response.json(await getScreenings(api));
+});
+
+app.get("/api/movies/:movieId/reviews", async (request, response) => {
+  const reviews = await api.loadReviews(request.params.movieId);
+  response.json({
+    data: reviews.map(review => ({
+      name: review.author,
+      comment: review.comment,
+      rating: review.rating,
+    })),
+  });
 });
 
 app.use("/", express.static("./static"));
