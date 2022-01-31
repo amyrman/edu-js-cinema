@@ -1,8 +1,9 @@
-import express from "express";
+import express, { response } from "express";
 import { engine } from "express-handlebars";
-import { loadAllMovies, loadMovie } from "./movies.js";
+import { loadAllMovies, loadMovie, loadScreenings} from "./movies.js";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
+//import { getScreenings } from "./movieScreenings.js";
 
 const app = express();
 
@@ -32,6 +33,21 @@ app.get("/movies/:Id", async (request, response) => {
   movie
     ? response.render("movie", { movie, kino })
     : response.status(404).render("404", { kino });
+})
+
+app.get("/api/screenings/", async (request, response) => {
+  const screenings = await loadScreenings();
+  response.json({
+      data: screenings.map(obj => {
+        return {
+          time: obj.attributes.start_time,
+          room: obj.attributes.room,
+          movie: {
+          id: obj.attributes.movie.data.id
+          }
+        };
+      }),
+    })
 });
 
 app.use("/", express.static("./static"));

@@ -1,6 +1,15 @@
 import fetch from 'node-fetch';
 
 const API = 'https://lernia-kino-cms.herokuapp.com/api/movies';
+const APIBASE = 'https://lernia-kino-cms.herokuapp.com/api';
+
+
+function simplifyMovieObject(movie) {
+  return {
+    id: movie.id,
+    ...movie.attributes,
+  };
+}
 
 const loadAllMovies = async () => {
   const movies = await fetch(API);
@@ -14,4 +23,11 @@ const loadMovie = async (id) => {
   return data.data;
 }
 
-export { loadAllMovies, loadMovie } 
+
+export async function loadScreenings (){
+  const response = await fetch(APIBASE + "/screenings?populate=movie&pagination[pageSize]=1000");
+  const data = await response.json();
+  return data.data;
+}
+
+export {loadAllMovies, loadMovie} 
