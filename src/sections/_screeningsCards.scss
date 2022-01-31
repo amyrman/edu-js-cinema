@@ -1,3 +1,9 @@
+.screeningsCardsHeader {
+  text-align: center;
+  color: $c-white;
+  background-color: $c-black;
+}
+
 .screeningsCards {
   display: flex;
   flex-direction: row;

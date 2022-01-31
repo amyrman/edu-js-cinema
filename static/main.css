@@ -163,6 +163,12 @@ img {
   }
 }
 
+.screeningsCardsHeader {
+  text-align: center;
+  color: #fafafa;
+  background-color: #100f0f;
+}
+
 .screeningsCards {
   display: flex;
   flex-direction: row;
