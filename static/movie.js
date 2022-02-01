@@ -22,22 +22,22 @@ async function renderReviews(movieId) {
       rating.innerHTML = review.rating;
       reviewDiv.append(rating);
 
-      const li = document.createElement('li');
-      li.append(reviewDiv);
-      li.append(comment);
-      li.append(name);
-      li.append(rating);
+      const div = document.createElement('div');
+      div.append(reviewDiv);
+      div.append(comment);
+      div.append(name);
+      div.append(rating);
   
-      document.querySelector('#renderList').append(li);
+      document.querySelector('#renderList').append(div);
     });
    
-
+    renderReviews(movieId);
 
   }
   
   
    
-  renderReviews(movieId);
+
 
     
   
