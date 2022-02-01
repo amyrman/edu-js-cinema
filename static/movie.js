@@ -2,13 +2,13 @@ async function renderReviews(movieId) {
     const res = await fetch(`/api/movies/${movieId}/reviews`);
     const payload = await res.json();
   
-    const ctr = document.querySelector('#reviews');
-    ctr.innerHTML = '';
+    const thing = document.querySelector('#reviews');
+    thing.innerHTML = '';
   
     payload.data.forEach(review => {
       const reviewDiv = document.createElement('div');
       reviewDiv.className = 'review';
-      ctr.append(reviewDiv);
+      thing.append(reviewDiv);
   
       const comment = document.createElement('div');
       comment.innerHTML = review.comment;
@@ -21,15 +21,24 @@ async function renderReviews(movieId) {
       const rating = document.createElement('div');
       rating.innerHTML = review.rating;
       reviewDiv.append(rating);
-    });
 
-    renderReviews(movieId);
+      const li = document.createElement('li');
+      li.append(reviewDiv);
+      li.append(comment);
+      li.append(name);
+      li.append(rating);
+  
+      document.querySelector('#renderList').append(li);
+    });
+   
+
 
   }
   
   
    
-      
+  renderReviews(movieId);
+
     
   
   

@@ -1,13 +1,13 @@
 <div class="moviePage">
   <div class="movieMeta">
-    <h1>{{movie.attributes.title}}</h1>
+    <h1>{{movie.title}}</h1>
     {{! IMDB Rating Button }}
     {{! Stolen code from IMDB }}
     <div class="imdbBtn">
       <span
         class="imdbRatingPlugin"
         data-user="ur7938290"
-        data-title="{{movie.attributes.imdbId}}"
+        data-title="{{movie.imdbId}}"
         data-style="p1"
       >
         <img
@@ -23,9 +23,9 @@
       </script>
       {{! ---------------------}}
     </div>
-    {{{ movie.attributes.intro}}}
+    {{{markdown movie.intro}}}
   </div>
-  <img src="{{movie.attributes.image.url}}" />
+  <img src="{{movie.image.url}}" />
 
 </div>
 
@@ -33,6 +33,13 @@
   <h2>Kommande visningar</h2>
   <ul id="screeningsList">
   </ul>
+
+</div>
+
+<div id="reviews">
+  <h2>Här kommer rating</h2>
+    <ul id="renderList" >
+    </ul>
 </div>
 <script src="/../screening.js"></script>
 <script src="/../movie.js"></script>
