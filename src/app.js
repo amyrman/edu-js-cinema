@@ -51,7 +51,9 @@ app.get("/movies/:Id", async (request, response) => {
 
  app.get("/api/screenings/:id", async (request, response) => { 
       const screenings = await getScreenings(request.params.id);
-      response.status(200).json(screenings)
+      getScreenings
+      ? response.status(200).json(screenings)
+      : response.status(404).render("404",{ kino });
   });
     
 
