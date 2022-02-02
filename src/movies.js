@@ -5,6 +5,7 @@ const APIBASE = 'https://lernia-kino-cms.herokuapp.com/api';
 
 
 function simplifyMovieObject(movie) {
+  console.log(movie.id)
   return {
     id: movie.id,
     ...movie.attributes,
@@ -24,10 +25,16 @@ const loadMovie = async (id) => {
 }
 
 
-export async function loadScreenings (){
-  const response = await fetch(APIBASE + "/screenings?populate=movie&pagination[pageSize]=1000");
-  const data = await response.json();
+export async function loadScreenings (id){
+  const data = await fetch(`${APIBASE}/screenings?filters[movie]=${id}`)
+  .then(respons => respons.json()); 
   return data.data;
+}
+
+
+
+export default{
+  loadScreenings: loadScreenings,
 }
 
 export {loadAllMovies, loadMovie} 

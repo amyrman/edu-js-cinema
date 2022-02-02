@@ -1,12 +1,13 @@
-async function renderScreening() {
-    const res = await fetch('/api/screenings/');
+async function renderScreening(id) {
+
+    const res = await fetch(`/api/screenings/${id}`);
     const payload = await res.json();
 
     payload.data.forEach(screening => {
         const time = document.createElement('a');
         time.innerHTML = screening.time;
 
-        const room = document.createElement('a');
+        const room = document.createElement('span');
         room.innerHTML = screening.room;
 
         const li = document.createElement('li');
@@ -14,10 +15,15 @@ async function renderScreening() {
         li.append(room);
 
         document.querySelector('#screeningsList').append(li);
+    
     });
 }
 
-renderScreening();
+const url = window.location.href;
+const arr = url.split("/");
+const id = arr[arr.length - 1];
+
+ renderScreening(id);
 
 
 
