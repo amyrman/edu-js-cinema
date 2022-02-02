@@ -10,7 +10,7 @@ async function renderReviews(movieId) {
     let handlingArray = [];
     const countALL = array.map((a) => count++);
     /// här kollar du annars return
-    if (payload.data.length > 100) {
+    if (payload.data.length > 5) {
       array.forEach((obj) => handlingArray.push(obj.rating));
       const sum = handlingArray.reduce((a, b) => a + b, 0);
       const avg = sum / handlingArray.length || 0;
@@ -29,7 +29,7 @@ async function renderReviews(movieId) {
   parent.textContent = calculateAverage(payload.data);
   document.body.append(parent);
 
-  console.log(parent);
+  
 }
 
 const url = window.location.href;

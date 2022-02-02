@@ -1,23 +1,18 @@
+
+
 <div class="moviePage">
   <div class="movieMeta">
+
+    
     <h1>{{movie.title}}</h1>
     {{! IMDB Rating Button }}
     {{! Stolen code from IMDB }}
     <div class="imdbBtn">
-      <span
-        class="imdbRatingPlugin"
-        data-user="ur7938290"
-        data-title="{{movie.imdbId}}"
-        data-style="p1"
-      >
-        <img
-          src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png"
-        />
-      </span>
+     
       <script>
         (function(d,s,id){ var js, stags=d.getElementsByTagName(s)[0];
         if(d.getElementById(id)){ return; } js=d.createElement(s); js.id=id;
-        js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+        //js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
         stags.parentNode.insertBefore(js,stags); })
         (document,"script","imdb-rating-api");
       </script>
@@ -26,6 +21,20 @@
     {{{markdown movie.intro}}}
   </div>
   <img src="{{movie.image.url}}" />
+
+  
+  <div id="reviews">
+    {{#each reviews}}
+      <div class="review"> 
+        <div></div>
+        <div class="avg">{{{ this.avg }}}</div>
+        <div class="sum">{{{ this.sum }}}</div>
+      </div>
+
+      <div>
+      </div>
+    {{/each}}
+
 
 </div>
 
@@ -44,13 +53,5 @@
   </ul>
 </div> --}}
 
-
-   <div id="reviews">
-    {{#each reviews}}
-      <div class="review">
-        <div class="avg">{{{ this.avg }}}</div>
-        <div class="sum">{{{ this.sum }}}</div>
-      </div>
-    {{/each}}
-
+   
 <script src="/../movie.js"></script>
