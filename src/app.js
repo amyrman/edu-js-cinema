@@ -3,10 +3,20 @@ import { engine } from "express-handlebars";
 import { loadAllMovies, loadMovie, loadScreenings} from "./movies.js";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
-//import {getScreenings} from "./movieScreenings.js";
+import {getScreenings} from "./movieScreenings.js";
  
 
 //import { getScreenings } from "./movieScreenings.js";
+
+const functionA = (screenings) => {
+  const screening = screenings.filter(obj => {
+    const screeningTime = new Date(obj.attributes.start_time);
+    return screeningTime > now; 
+  })
+  .slice(0, 10);
+  console.log(screening);
+  return [];
+}
 
 const app = express();
 
@@ -33,30 +43,15 @@ app.get("/movies", async (request, response) => {
 
 app.get("/movies/:Id", async (request, response) => {  
   const movie = await loadMovie(request.params.Id);
-  const screening = await loadScreenings(request.params.Id);
   movie
-    ? response.render("movie", { movie,screening, kino })
+    ? response.render("movie", { movie, kino })
     : response.status(404).render("404", { kino });
 })
 
 
-// app.get("/api/screenings/:id", async (request, response) => {
-//   const screenings = await getScreenings(request.params.id);
-
-// });
-
- app.get("/api/screenings/:id", async (request, response) => {
-   const screenings = await loadScreenings(request.params.id);
-  
-   response.json({
-       data: screenings.map(obj => {
-         return {
-           time: obj.attributes.start_time,
-           room: obj.attributes.room,
-         };
-       }),
-      
-    })
+ app.get("/api/screenings/:id", async (request, response) => { 
+      const screenings = await getScreenings(request.params.id);
+      response.status(200).json(screenings)
   });
     
 

@@ -1,8 +1,6 @@
 async function renderScreening(id) {
 
-    const res = await fetch(`/api/screenings/${id}`);
-    const payload = await res.json();
-
+    const payload = await fetch(`/api/screenings/${id}`).then(res => res.json());
     payload.data.forEach(screening => {
         const time = document.createElement('a');
         time.innerHTML = screening.time;
