@@ -5,19 +5,72 @@ async function renderReviews(movieId) {
   const thing = document.querySelector("#reviews");
   thing.innerHTML = "";
 
+// const array = [] ;
+// const  hej = array.push(payload.data);
+
+
+
+
+
+///////
+function calculateAverage(array) {
+  let count = 0;
+  let handlingArray = [];
+  const countALL = array.map(a => count++);
+  /// här kollar du annars return 
+  if (countALL >= 5){
+    array.forEach(obj => handlingArray.push(obj.rating));
+  const sum = handlingArray.reduce((a, b) => a + b, 0);
+  const avg = (sum / handlingArray.length) || 0;
+  console.log(sum, avg);
+  }
+  else{
+    // imdb 
+  }
+  
+
+
+
+}
+
+calculateAverage(payload.data);
+// console.log(arry); 
+// console.log(payload.data);
+
+
+
+
+
+
   payload.data.forEach((review) => {
     const reviewDiv = document.createElement("div");
     reviewDiv.className = "review";
     thing.append(reviewDiv);
 
-    
-
     const rating = document.createElement("div");
     rating.innerHTML = review.rating;
     reviewDiv.append(rating);
+    // console.log(rating);
 
-    //   const div = document.createElement('div');
+    
+    
+  
+    
+    
+    
+    
+    
+
+    ///////
+
+    
+
+    
   });
+  
+
+  
+
 }
 
 const url = window.location.href;
@@ -26,26 +79,10 @@ const id = arr[arr.length - 1];
 
 renderReviews(id);
 
-// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-/* function calculateAverage(rating){ */
-/*   var total = 0; */
-/*   var count = 0; */
-/*  */
-/*   rating.forEach(function(item, index) { */
-/*     total += item; */
-/*     count++; */
-/*   }) */
-/*   return total / count; */
-/* } */
-/*  */
-/* console.log(calculateAverage(rating)); */
 
-/* if(data.length >= 5){
-   rating * rating.length / data.length;
-};else{
-  imdb betyg
-}
+//  if(data.length >= 5){
 
-
-
-*/
+//    rating * rating.length / data.length;
+// };else{
+//   imdb betyg
+// }
