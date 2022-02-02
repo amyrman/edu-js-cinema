@@ -3,7 +3,6 @@ import { engine } from "express-handlebars";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
 import api from "./movies.js";
-import { getScreenings } from "./screenings.js";
 
 
 const app = express();
@@ -33,27 +32,44 @@ app.get("/movies", async (request, response) => {
 
 app.get("/movies/:movieId", async (request, response) => {
   const movie = await api.loadMovie(request.params.movieId);
-  console.log(request.params.movieId);
   movie
     ? response.render("movie", { movie, kino })
     : response.status(404).render("404", { kino });
-});
-
-
-app.get("/api/screenings", async (request, response) => {
-  response.json(await getScreenings(api));
 });
 
 app.get("/api/movies/:movieId/reviews", async (request, response) => {
   const reviews = await api.loadReviews(request.params.movieId);
   response.json({
     data: reviews.map(review => ({
-      name: review.author,
-      comment: review.comment,
       rating: review.rating,
     })),
   });
 });
+
+app.get("/api/movies/:movieId/reviews", async (request, response) => {
+  const reviews = await api.loadReviews(request.params.movieId);
+  response.json({
+    data: reviews.map(review => ({
+      rating: review.rating,
+    })),
+  });
+ 
+});
+
+// function calculateAverage(data){
+//   var total = 0;
+//   var count = 0;
+  
+//   data.forEach(function(item, index) {
+//     total += item;
+//     count++;
+//   })
+//   return total / count;
+// }
+// console.log(calculateAverage(data));
+  
+
+
 
 app.use("/", express.static("./static"));
 

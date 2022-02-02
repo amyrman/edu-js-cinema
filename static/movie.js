@@ -10,13 +10,7 @@ async function renderReviews(movieId) {
     reviewDiv.className = "review";
     thing.append(reviewDiv);
 
-    const comment = document.createElement("div");
-    comment.innerHTML = review.comment;
-    reviewDiv.append(comment);
-
-    const name = document.createElement("div");
-    name.innerHTML = review.name;
-    reviewDiv.append(name);
+    
 
     const rating = document.createElement("div");
     rating.innerHTML = review.rating;
@@ -31,3 +25,27 @@ const arr = url.split("/");
 const id = arr[arr.length - 1];
 
 renderReviews(id);
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+/* function calculateAverage(rating){ */
+/*   var total = 0; */
+/*   var count = 0; */
+/*  */
+/*   rating.forEach(function(item, index) { */
+/*     total += item; */
+/*     count++; */
+/*   }) */
+/*   return total / count; */
+/* } */
+/*  */
+/* console.log(calculateAverage(rating)); */
+
+/* if(data.length >= 5){
+   rating * rating.length / data.length;
+};else{
+  imdb betyg
+}
+
+
+
+*/
