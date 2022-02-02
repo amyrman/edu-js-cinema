@@ -34,7 +34,6 @@ app.get("/movies", async (request, response) => {
 app.get("/movies/:movieId", async (request, response) => {
   const movie = await api.loadMovie(request.params.movieId);
   console.log(request.params.movieId);
-  // const reviews = await api.loadReviews(request.params.movieId);
   movie
     ? response.render("movie", { movie, kino })
     : response.status(404).render("404", { kino });
