@@ -30,11 +30,27 @@
 </div>
 
 
-
+{{!-- 
 <div id="reviews">
   <h2>Här kommer rating</h2>
     <div id="renderList" >
     </div>
-</div>
+</div> --}}
+
+
+{{!-- <div id="reviews">
+  <h2>Kommande visningar</h2>
+  <ul id="screeningsList">
+  </ul>
+</div> --}}
+
+
+   <div id="reviews">
+    {{#each reviews}}
+      <div class="review">
+        <div class="avg">{{{ this.avg }}}</div>
+        <div class="sum">{{{ this.sum }}}</div>
+      </div>
+    {{/each}}
 
 <script src="/../movie.js"></script>

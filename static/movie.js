@@ -5,72 +5,31 @@ async function renderReviews(movieId) {
   const thing = document.querySelector("#reviews");
   thing.innerHTML = "";
 
-// const array = [] ;
-// const  hej = array.push(payload.data);
+  function calculateAverage(array) {
+    let count = 0;
+    let handlingArray = [];
+    const countALL = array.map((a) => count++);
+    /// här kollar du annars return
+    if (payload.data.length > 100) {
+      array.forEach((obj) => handlingArray.push(obj.rating));
+      const sum = handlingArray.reduce((a, b) => a + b, 0);
+      const avg = sum / handlingArray.length || 0;
 
+      return avg;
+    } else {
+      // imdb
 
-
-
-
-///////
-function calculateAverage(array) {
-  let count = 0;
-  let handlingArray = [];
-  const countALL = array.map(a => count++);
-  /// här kollar du annars return 
-  if (countALL >= 5){
-    array.forEach(obj => handlingArray.push(obj.rating));
-  const sum = handlingArray.reduce((a, b) => a + b, 0);
-  const avg = (sum / handlingArray.length) || 0;
-  console.log(sum, avg);
+      return payload.data.length;
+    }
   }
-  else{
-    // imdb 
-  }
-  
 
+  calculateAverage(payload.data);
 
+  const parent = document.createElement("div");
+  parent.textContent = calculateAverage(payload.data);
+  document.body.append(parent);
 
-}
-
-calculateAverage(payload.data);
-// console.log(arry); 
-// console.log(payload.data);
-
-
-
-
-
-
-  payload.data.forEach((review) => {
-    const reviewDiv = document.createElement("div");
-    reviewDiv.className = "review";
-    thing.append(reviewDiv);
-
-    const rating = document.createElement("div");
-    rating.innerHTML = review.rating;
-    reviewDiv.append(rating);
-    // console.log(rating);
-
-    
-    
-  
-    
-    
-    
-    
-    
-
-    ///////
-
-    
-
-    
-  });
-  
-
-  
-
+  console.log(parent);
 }
 
 const url = window.location.href;
@@ -78,11 +37,3 @@ const arr = url.split("/");
 const id = arr[arr.length - 1];
 
 renderReviews(id);
-
-
-//  if(data.length >= 5){
-
-//    rating * rating.length / data.length;
-// };else{
-//   imdb betyg
-// }
