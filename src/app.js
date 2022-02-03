@@ -1,6 +1,7 @@
 import express from "express";
 import { engine } from "express-handlebars";
-import { loadAllMovies, loadMovie, loadReviews } from "./movies.js";
+import { loadAllMovies, loadMovie } from "./movies.js";
+import { loadReviews } from "./loadReviews.js"
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
 
@@ -34,9 +35,18 @@ app.get("/movies/:Id", async (request, response) => {
     : response.status(404).render("404", { kino });
 });
 
-app.get("/api/reviews", async (request, response) => {
-  response.json(await loadReviews());
-})
+
+app.get("/api/movies/:id/reviews", async (request, response) => {
+
+  const reviews = await loadReviews(request.params.id);
+  response.json({
+    data: reviews.map(review => ({
+      comment: review.attributes.comment,
+      author: review.attributes.author,
+      rating: review.attributes.rating,
+    })),
+  });
+});
 
 app.use("/", express.static("./static"));
 
