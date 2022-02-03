@@ -274,6 +274,36 @@ img {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+.moviePage .reviews {
+  grid-column: 1/3;
+}
+.moviePage .reviews li {
+  margin: 0.5em;
+}
+.moviePage .reviews li span {
+  display: flex;
+  flex-direction: row;
+}
+.moviePage .reviews li .reviewComment {
+  font-size: 1rem;
+}
+.moviePage .reviews li .reviewRating {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.moviePage .reviews li .reviewAuthor {
+  font-style: italic;
+  font-size: 0.75rem;
+}
+.moviePage .reviews .reviewPages {
+  text-align: center;
+}
+.moviePage .reviews .reviewPages * {
+  margin: 0.3em;
+}
+.moviePage .reviews .reviewPages a {
+  cursor: pointer;
+}
 .moviePage .movieMeta {
   grid-column: 4/8;
   margin-bottom: 1em;
