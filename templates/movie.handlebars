@@ -19,16 +19,31 @@
       {{! ---------------------}}
     </div>
     {{{markdown movie.intro}}}
+    <div id="reviews">
+    {{#each reviews}}
+      <div class="review">
+        <p> hej </p>p>
+        <div>
+          <h3 class="avg" id="ratingStars" >Rating</h3>
+        </div>
+        <div class="avg">{{{ this.avg }}}</div>
+      </div>
+
+      <div>
+      </div>
+    {{/each}}
   </div>
   <img src="{{movie.image.url}}" />
 
   
   <div id="reviews">
     {{#each reviews}}
-      <div class="review"> 
-        <div></div>
+      <div class="review">
+        <p> hej </p>
+        <div>
+          <h3 class="avg" id="ratingStars" >Rating</h3>
+        </div>
         <div class="avg">{{{ this.avg }}}</div>
-        <div class="sum">{{{ this.sum }}}</div>
       </div>
 
       <div>
@@ -36,22 +51,8 @@
     {{/each}}
 
 
+  <div class="movies1"></div>
 </div>
-
-
-{{!-- 
-<div id="reviews">
-  <h2>Här kommer rating</h2>
-    <div id="renderList" >
-    </div>
-</div> --}}
-
-
-{{!-- <div id="reviews">
-  <h2>Kommande visningar</h2>
-  <ul id="screeningsList">
-  </ul>
-</div> --}}
 
    
 <script src="/../movie.js"></script>

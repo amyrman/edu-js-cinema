@@ -40,36 +40,19 @@ app.get("/movies/:movieId", async (request, response) => {
 
 app.get("/api/movies/:movieId/reviews", async (request, response) => {
   const reviews = await api.loadReviews(request.params.movieId);
+  const title = await api.loadMovie(request.params.movieId);
+  let count = 0;
+  reviews.forEach((a) => count++); 
   response.json({
+    title: title.title,
+    count: count,
     data: reviews.map((review) => ({
       rating: review.rating,
     })),
   });
 });
 
-app.get("/api/movies/:movieId/reviews", async (request, response) => {
-  const reviews = await api.loadReviews(request.params.movieId);
-  response.json({
-    data: reviews.map((review) => ({
-      rating: review.rating,
-     
-    })),
-  });
-});
 
-
-
-// function calculateAverage(data){
-//   var total = 0;
-//   var count = 0;
-
-//   data.forEach(function(item, index) {
-//     total += item;
-//     count++;
-//   })
-//   return total / count;
-// }
-// console.log(calculateAverage(data));
 
 app.use("/", express.static("./static"));
 
