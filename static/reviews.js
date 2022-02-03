@@ -1,4 +1,4 @@
-window.onload = async ( )=> {
+window.onload = async ()=> {
   try { 
     renderReviews();
   } catch { (error)
@@ -18,12 +18,12 @@ const renderReviews = async () => {
   const reviews = await getReviews();
   const reviewsPerPage = 5;
   const totalPages = Math.ceil(reviews.data.length / reviewsPerPage);
-  let currentPage = 1;
+  const firstPage = 1;
   
-  renderReviewPage(reviews, reviewsPerPage, totalPages, currentPage);
+  renderReviewPage(reviews, reviewsPerPage, totalPages, firstPage);
 }
 
-// Render the reviews for page nr #
+// Render the reviews for page number #
 const renderReviewPage = async (reviews, reviewsPerPage, totalPages, pageNumber) => {
 
   const reviewDiv = document.querySelector("#reviewsList");
@@ -92,3 +92,5 @@ const renderReviewPage = async (reviews, reviewsPerPage, totalPages, pageNumber)
     document.querySelector('#reviewsList').append(pages);
   }
 }
+
+export { renderReviewPage }
