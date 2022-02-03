@@ -1,4 +1,7 @@
 <div class="moviePage">
+  <div class="reviews">
+    <ul id="reviewsList"></ul>
+  </div>
   <div class="movieMeta">
     <h1>{{movie.attributes.title}}</h1>
     {{! IMDB Rating Button }}
@@ -28,3 +31,4 @@
   <img src="{{movie.attributes.image.url}}" />
 
 </div>
+<script src="/reviews.js"></script>
