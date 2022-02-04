@@ -1,8 +1,25 @@
 /**
  * @jest-environment jsdom
  */
+ import app from "../src/app.js";
+ import request from "supertest";
 
-test('Test pagination', async () => {
+test('Test fetching review for movie', async () => {
+  const response = await request(app)
+    .get('/api/movies/2/reviews')
+    .expect(200);
+  expect(response).toBeTruthy();
+})
+
+test('Test fetching review for movie that doesnt exist', async () => {
+  const response = await request(app)
+    .get('/api/movies/9999/reviews')
+    .expect(404);
+  expect(response).toBeTruthy();
+})
+
+
+test('Test reviews and pagination', async () => {
 
 const reviews = mockapi;
 const reviewsPerPage = 5;
@@ -14,9 +31,6 @@ const reviewsLength = reviews.data.length;
 expect(reviews.data).toHaveLength(36);
 expect(reviewsLength).toBeGreaterThan(10);
 expect(totalPages).toEqual(8);
-
-const element = document.createElement('div');
-expect(element).not.toBeNull();
 
 
 expect(renderReviewPage(reviews, reviewsPerPage, totalPages, firstPage)).toBeTruthy();
