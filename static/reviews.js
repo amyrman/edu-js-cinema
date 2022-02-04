@@ -93,4 +93,3 @@ const renderReviewPage = async (reviews, reviewsPerPage, totalPages, pageNumber)
   }
 }
 
-export { renderReviewPage }
