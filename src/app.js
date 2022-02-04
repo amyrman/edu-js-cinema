@@ -37,7 +37,10 @@ app.get("/movies/:Id", async (request, response) => {
 
 
 app.get("/api/movies/:id/reviews", async (request, response) => {
-
+  const movie = await loadMovie(request.params.id);
+  if (!movie) {
+    response.status(404).end();
+  } else {
   const reviews = await loadReviews(request.params.id);
   response.json({
     data: reviews.map(review => ({
@@ -45,8 +48,9 @@ app.get("/api/movies/:id/reviews", async (request, response) => {
       author: review.attributes.author,
       rating: review.attributes.rating,
     })),
-  });
+  })};
 });
+
 
 app.use("/", express.static("./static"));
 
