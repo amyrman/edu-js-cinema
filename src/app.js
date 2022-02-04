@@ -3,6 +3,8 @@ import { engine } from "express-handlebars";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
 import api from "./movies.js";
+import { getRatings } from "./rates.js";
+
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -34,22 +36,14 @@ app.get("/movies", async (request, response) => {
 app.get("/movies/:movieId", async (request, response) => {
   const movie = await api.loadMovie(request.params.movieId);
   movie
-    ? response.render("movie", { movie, kino })
-    : response.status(404).render("404", { kino });
+  ? response.render("movie", { movie, kino })
+  : response.status(404).render("404", { kino });
+
 });
 
 app.get("/api/movies/:movieId/rating", async (request, response) => {
-  const rates = await api.loadRating(request.params.movieId);
-  const title = await api.loadMovie(request.params.movieId);
-  let count = 0;
-  rates.forEach((a) => count++);
-  response.json({
-    title: title.title,
-    count: count,
-    data: rates.map((rate) => ({
-      rating: rate.rating,
-    })),
-  });
+
+  response.json(await getRatings(request));
 });
 
 app.use("/", express.static("./static"));
