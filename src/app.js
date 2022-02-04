@@ -38,21 +38,19 @@ app.get("/movies/:movieId", async (request, response) => {
     : response.status(404).render("404", { kino });
 });
 
-app.get("/api/movies/:movieId/reviews", async (request, response) => {
-  const reviews = await api.loadReviews(request.params.movieId);
+app.get("/api/movies/:movieId/rating", async (request, response) => {
+  const rates = await api.loadRating(request.params.movieId);
   const title = await api.loadMovie(request.params.movieId);
   let count = 0;
-  reviews.forEach((a) => count++); 
+  rates.forEach((a) => count++);
   response.json({
     title: title.title,
     count: count,
-    data: reviews.map((review) => ({
-      rating: review.rating,
+    data: rates.map((rate) => ({
+      rating: rate.rating,
     })),
   });
 });
-
-
 
 app.use("/", express.static("./static"));
 

@@ -88,7 +88,8 @@ img {
   box-shadow: 0 -150px 100px #100f0f inset;
   transition: background-image 1s ease-in-out;
 }
-.hero .heroContainer .heroPicPrev, .hero .heroContainer .heroPicNext {
+.hero .heroContainer .heroPicPrev,
+.hero .heroContainer .heroPicNext {
   position: absolute;
   top: calc(50% - 30px);
   font-size: 30px;
@@ -97,7 +98,8 @@ img {
   font-style: bold;
   padding: 5px 15px;
 }
-.hero .heroContainer .heroPicPrev:hover, .hero .heroContainer .heroPicNext:hover {
+.hero .heroContainer .heroPicPrev:hover,
+.hero .heroContainer .heroPicNext:hover {
   background-color: rgba(110, 108, 108, 0.6);
 }
 .hero .heroContainer .heroPicPrev {
@@ -353,3 +355,12 @@ img {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.ratings {
+  display: flex;
+  justify-content: end;
+  padding-top: 30px;
+  flex-direction: column;
+  font-size: 30px;
+  align-items: center;
+}

@@ -1,14 +1,9 @@
-
-
 <div class="moviePage">
   <div class="movieMeta">
-
-    
-    <h1>{{movie.title}}</h1>
+   <h1>{{movie.title}}</h1>
     {{! IMDB Rating Button }}
     {{! Stolen code from IMDB }}
     <div class="imdbBtn">
-     
       <script>
         (function(d,s,id){ var js, stags=d.getElementsByTagName(s)[0];
         if(d.getElementById(id)){ return; } js=d.createElement(s); js.id=id;
@@ -19,40 +14,12 @@
       {{! ---------------------}}
     </div>
     {{{markdown movie.intro}}}
-    <div id="reviews">
-    {{#each reviews}}
-      <div class="review">
-        <p> hej </p>p>
-        <div>
-          <h3 class="avg" id="ratingStars" >Rating</h3>
-        </div>
-        <div class="avg">{{{ this.avg }}}</div>
-      </div>
-
-      <div>
-      </div>
-    {{/each}}
-  </div>
   <img src="{{movie.image.url}}" />
 
-  
-  <div id="reviews">
-    {{#each reviews}}
-      <div class="review">
-        <p> hej </p>
-        <div>
-          <h3 class="avg" id="ratingStars" >Rating</h3>
-        </div>
-        <div class="avg">{{{ this.avg }}}</div>
-      </div>
-
-      <div>
-      </div>
-    {{/each}}
-
-
-  <div class="movies1"></div>
+   <div class="ratings">
+      <h3>Rating</h3> 
+    <div id="rating"></div>
 </div>
 
-   
+
 <script src="/../movie.js"></script>

@@ -22,15 +22,14 @@ export async function loadMovie(id) {
   return simplifyObject(payload.data);
 }
 
-export async function loadReviews(movieId) {
+export async function loadRating(movieId) {
   const res = await fetch(API_BASE + "/reviews?filters[movie]=" + movieId);
   const payload = await res.json();
   return payload.data.map(simplifyObject);
-
 }
 
 export default {
-  loadReviews: loadReviews,
+  loadRating: loadRating,
   loadAllMovies: loadAllMovies,
   loadMovie: loadMovie,
 };
