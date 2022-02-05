@@ -42,7 +42,6 @@ app.get("/movies/:movieId", async (request, response) => {
 });
 
 app.get("/api/movies/:movieId/rating", async (request, response) => {
-
   response.json(await getRatings(request));
 });
 

@@ -1,6 +1,7 @@
 import api from "./movies.js";
 
 
+
 export async function getRatings(request) {
   const rates = await api.loadRating(request.params.movieId);
   const title = await api.loadMovie(request.params.movieId);
