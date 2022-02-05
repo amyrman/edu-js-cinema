@@ -1,4 +1,5 @@
 import express from "express";
+import fetch from "node-fetch";
 import { engine } from "express-handlebars";
 import { loadAllMovies, loadMovie } from "./movies.js";
 import { kino } from "./kinoBuilds.js";
@@ -14,10 +15,12 @@ app.engine("handlebars", engine({
 app.set("view engine", "handlebars");
 app.set("views", "./templates");
 
+app.use(express.json());
 
 app.get("/", async (request, response) => {
   response.render("index", { kino });
 });
+
 app.get("/index", async (request, response) => {
   response.render("index", { kino });
 });
@@ -34,6 +37,22 @@ app.get("/movies/:Id", async (request, response) => {
     : response.status(404).render("404", { kino });
 });
 
-app.use("/", express.static("./static"));
+app.post('/movies/:id/reviews', async (request, response) => {
+  response.status(200);
+  console.log(request.body);
+  
+  await fetch('https://lernia-kino-cms.herokuapp.com/api/reviews', {
+    method: 'POST',
+    mode: 'cors',
+    credential: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(request.body)
+  })
+
+})
+
+app.use("/static", express.static("./static"));
 
 export default app;
