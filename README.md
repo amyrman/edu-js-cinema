@@ -16,7 +16,7 @@ The screenings route returns an object with a array of data containing upcoming 
 
 
 - **Rating**
-Rating is used to see the if the reviews are more than 5, then it will the script will calculated the average of it and show it.
+It's used to see the if the reviews are more than 5, then it will the script will calculated the average of it and show it.
 If reviews are less then 5, then it will take the IMBD rating and show it. 
 
 - **Method and ULR:**
