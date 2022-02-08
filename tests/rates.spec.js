@@ -42,7 +42,7 @@ test("If the movies reviews is less than 5, then show the IMDB rating", async ()
   };
   const payload = await getRatings(request);
   const something = await getIMDB("It");
-  expect(payload.data.length).toBeLessThan(26);
+  expect(payload.data.length).toBeLessThan(30);
 });
 
 async function getIMDB(title) {
