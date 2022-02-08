@@ -4,6 +4,12 @@ import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
 import api from "./movies.js";
 import { getRatings } from "./rates.js";
+import { loadAllMovies, loadMovie } from "./movies.js";
+import { loadReviews } from "./loadReviews.js"
+import { kino } from "./kinoBuilds.js";
+import { marked } from "marked";
+import { getUpcomingScreenings } from './screenings.js'
+
 
 
 const app = express();
@@ -44,6 +50,36 @@ app.get("/movies/:movieId", async (request, response) => {
 app.get("/api/movies/:movieId/rating", async (request, response) => {
   response.json(await getRatings(request));
 });
+
+app.get('/api/screenings', async (request, response) => {
+  try {
+    const screeningsData = await getUpcomingScreenings();
+    const jsonObj = {
+      data: screeningsData
+    }
+    const jsonData = JSON.stringify(jsonObj)
+    response.json(JSON.parse(jsonData));
+  } catch (error) {
+    console.log(error)
+  }
+});
+
+
+app.get("/api/movies/:id/reviews", async (request, response) => {
+  const movie = await loadMovie(request.params.id);
+  if (!movie) {
+    response.status(404).end();
+  } else {
+  const reviews = await loadReviews(request.params.id);
+  response.json({
+    data: reviews.map(review => ({
+      comment: review.attributes.comment,
+      author: review.attributes.author,
+      rating: review.attributes.rating,
+    })),
+  })};
+});
+
 
 app.use("/", express.static("./static"));
 
