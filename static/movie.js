@@ -15,7 +15,7 @@ async function renderReviews(movieId) {
 
       return avg.toFixed(1) * 1;
     } else {
-      const imdbRatingGet = await fetch(
+     const imdbRatingGet = await fetch(
         `http://www.omdbapi.com/?t=${title}&apikey=f9ce419a`
       ).then((res) => res.json());
       return imdbRatingGet.imdbRating;
@@ -40,3 +40,5 @@ const arr = url.split("/");
 const id = arr[arr.length - 1];
 
 renderReviews(id);
+
+
