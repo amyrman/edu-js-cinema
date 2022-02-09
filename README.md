@@ -46,3 +46,24 @@ If no such movie exists, returns 404.
   - **Failed Response**
   Code: 404
   Content: ""
+
+
+- **Rating**
+It's used to see the if the reviews are more than 5, then it will the script will calculated the average of it and show it.
+If reviews are less then 5, then it will take the IMBD rating and show it. 
+
+- **Method and ULR:**
+GET: /api/movies/:movieId/rating
+Response: 200 OK
+
+{"title":"The Shawshank Redemption",
+"count":25,"data":[{"rating":5},
+{"rating":0},{"rating":0},{"rating":0},
+{"rating":2},{"rating":2},{"rating":2},
+{"rating":2},{"rating":1},{"rating":3},
+{"rating":0},{"rating":0},{"rating":0},
+{"rating":1},{"rating":1},{"rating":2},
+{"rating":4},{"rating":2},{"rating":5},
+{"rating":4},{"rating":3},{"rating":4},
+{"rating":3},{"rating":2},{"rating":1}]}
+
