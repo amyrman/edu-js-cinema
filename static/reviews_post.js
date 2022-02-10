@@ -1,43 +1,36 @@
+const reviewForm = document.querySelector('#reviewForm');
 
-const submitPostReview = document.querySelector('#submitPostReview');
-const postForm = document.querySelector('#postForm');
-
-postForm.addEventListener('submit', async (ev) => {
-  ev.preventDefault();
-  const rating = document.querySelector('#ratingPostReview');
-  const name = document.querySelector('#namePostReviewForm');
-  const comment = document.querySelector('#commentPostReview');
-  const url = 'http://localhost:5080/movies/:movieid/reviews';
-  const movieId = ev.target.movie.value;
+reviewForm.addEventListener('submit', async (event) => {
   
-  console.log(`/movies/${movieId}/reviews`);
+  event.preventDefault();
+  const movieId = event.target.movie.value;
+  console.log(movieId);
   
-  const postReviewsRes = await fetch(`/movies/${movieId}/reviews`, {
+  // console.log(`/movies/${movieId}/reviews`);
+  
+  const postReview = await fetch(`/movies/${movieId}/reviews`, {
     method: 'POST',
-    mode: 'cors',
-    credential: 'same-origin',
     headers: {
       'Content-Type': 'application/json'
-    },    
-    
-    // res.json is possible also?
+      },    
     body: JSON.stringify({
-      "data": {
-      "comment": comment.value,
-      "rating": parseInt(rating.value),
-      "author": name.value,
-      "movie": movieId,
-      }
-    })
+      'data': {
+      'author': event.target.comment.value,
+      'comment': event.target.comment.value,
+      'rating': event.target.comment.value,
+      'verified': true,
+      'movie': movieId,
+      'createdAt': new Date(),
+      'updatedAt': new Date(),
+      'createdBy': 'string or id',
+      'updatedBy': 'string or id'
+        }
       })
-      console.log(postReviewsRes);
-      console.log('TJO!');
-   //.then(res => {
-  //   return res.json()
-  // })
-  //   .then(data => console.log(data))
+    });
+    console.log(postReview);
+
   //   .catch(error => console.log('ERROR'))
-  comment.value = "";
-  name.value = "";
-  rating.value = 0;
+  // event.target.comment.value = '';
+  // event.target.comment.value = '';
+  // event.target.comment.value = null;
 });

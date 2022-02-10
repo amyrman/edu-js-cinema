@@ -14,9 +14,8 @@
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "dev": "nodemon .",
-    "start": "node .",
-    "watch": "sass --watch src/main.scss static/main.css"
+    "build": "nodemon . && sass --watch src/main.scss static/main.css",
+    "start": "node ."
   },
   "author": "Emil Noren",
   "license": "ISC",

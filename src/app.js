@@ -38,19 +38,18 @@ app.get("/movies/:Id", async (request, response) => {
 });
 
 app.post('/movies/:id/reviews', async (request, response) => {
-  response.status(200);
-  console.log(request.body);
   
-  await fetch('https://lernia-kino-cms.herokuapp.com/api/reviews', {
+  // console.log(request.body);
+  
+  const resp = await fetch('https://lernia-kino-cms.herokuapp.com/api/reviews', {
     method: 'POST',
-    mode: 'cors',
-    credential: 'same-origin',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(request.body)
+    body: JSON.stringify(request.body) // logga request.body för att se vad JSON gör, utan JSON, med JSON.parse
   })
-
+  console.log(resp);
+  response.status(200).json(resp);
 })
 
 app.use("/static", express.static("./static"));

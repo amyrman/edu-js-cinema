@@ -21,51 +21,37 @@
         stags.parentNode.insertBefore(js,stags); })
         (document,"script","imdb-rating-api");
       </script>
-      {{! ---------------------}}
+      {{! -----------------}}
     </div>
     {{{markdown movie.attributes.intro}}}
   </div>
   <img src="{{movie.attributes.image.url}}" />
-
-
-
-  <div class=''>
-    <form action='' method='post' id='postForm'>
-      <div class='form-group'>
-        <label for='namePostReviewForm'>Namn</label>
-        <input
-          type='name'
-          class='form-control'
-          id='namePostReviewForm'
-          placeholder='John Doe'
-          value=''
-          required
-        />
-        <input type='hidden' name='movie' value='{{movie.id}}' />
-      </div>
-      <div class='form-group'>
-        <label for='ratingPostReview'>Välj betyg 1-5</label>
-        <select class='form-control' id='ratingPostReview'>
-          <option>0</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class='form-group'>
-        <label for='commentPostReview'>Lämna kommentar</label>
-        <textarea
-          class='form-control'
-          id='commentPostReview'
-          rows='3'
-          required
-        ></textarea>
-      </div>
-      <input type='submit' />
-    </form>
-  </div>
 </div>
+<h2 id="reviewTitle">Review movie</h2>
+<div class="postReview">
+  <form id="reviewForm" autocomplete="off" onsubmit="document.querySelector('#reviewForm').reset()">
+    <textarea name="comment" placeholder="Comment"></textarea>
+    <input type="hidden" name="movie" value="{{movie.id}}" />
+    <label for="rating">Rating</label>
+    <div>
+    <select id="styled" name="rating" required>
+      <option value="">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      value="{{savedName}}"
+      required
+    />
+    </div>
+    <input type="submit">
+  </form>
+</div>
+
 <script src="/static/reviews_post.js"></script>
-</div>
