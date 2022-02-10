@@ -24,17 +24,15 @@ const loadMovie = async (id) => {
   return data.data;
 }
 
-
 export async function loadScreenings (id){
   const data = await fetch(`${APIBASE}/screenings?filters[movie]=${id}`)
   .then(respons => respons.json()); 
   return data.data;
 }
 
-
-
 export default{
-  loadScreenings: loadScreenings,
+  loadScreenings
+
 }
 
 export {loadAllMovies, loadMovie} 

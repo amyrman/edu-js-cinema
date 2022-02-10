@@ -1,5 +1,4 @@
 async function renderScreening(id) {
-
     const payload = await fetch(`/api/screenings/${id}`).then(res => res.json());
     payload.data.forEach(screening => {
         const time = document.createElement('a');
@@ -13,15 +12,13 @@ async function renderScreening(id) {
         li.append(room);
 
         document.querySelector('#screeningsList').append(li);
-    
     });
 }
-
 const url = window.location.href;
 const arr = url.split("/");
 const id = arr[arr.length - 1];
 
- renderScreening(id);
+renderScreening(id);
 
 
 

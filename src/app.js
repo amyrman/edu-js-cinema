@@ -4,9 +4,6 @@ import { loadAllMovies, loadMovie, loadScreenings} from "./movies.js";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
 import {getScreenings} from "./movieScreenings.js";
- 
-
-//import { getScreenings } from "./movieScreenings.js";
 
 const functionA = (screenings) => {
   const screening = screenings.filter(obj => {
@@ -28,7 +25,6 @@ app.engine("handlebars", engine({
 app.set("view engine", "handlebars");
 app.set("views", "./templates");
 
-
 app.get("/", async (request, response) => {
   response.render("index", { kino });
 });
@@ -48,17 +44,13 @@ app.get("/movies/:Id", async (request, response) => {
     : response.status(404).render("404", { kino });
 })
 
-
  app.get("/api/screenings/:id", async (request, response) => { 
       const screenings = await getScreenings(request.params.id);
       getScreenings
       ? response.status(200).json(screenings)
       : response.status(404).render("404",{ kino });
   });
-    
-
-
-
+   
 app.use("/", express.static("./static"));
 
 export default app;
