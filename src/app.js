@@ -6,8 +6,6 @@ import api from "./movies.js";
 import { getRatings } from "./rates.js";
 import { loadAllMovies, loadMovie } from "./movies.js";
 import { loadReviews } from "./loadReviews.js"
-import { kino } from "./kinoBuilds.js";
-import { marked } from "marked";
 import { getUpcomingScreenings } from './screenings.js'
 
 
