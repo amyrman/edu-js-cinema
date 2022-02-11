@@ -1,5 +1,5 @@
 .aboutCovid {
-  @include desktop {
+  // @include desktop {
     background-color: $c-black;
     color: $c-white;
     padding: 6rem;
@@ -12,4 +12,4 @@
       line-height: 1.5em;
     }
   }
-}
+// }

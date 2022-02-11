@@ -4,7 +4,7 @@ reviewForm.addEventListener('submit', async (event) => {
   
   event.preventDefault();
   const movieId = event.target.movie.value;
-  console.log(movieId);
+  // console.log(movieId);
   
   // console.log(`/movies/${movieId}/reviews`);
   
@@ -27,10 +27,7 @@ reviewForm.addEventListener('submit', async (event) => {
         }
       })
     });
-    console.log(postReview);
+    // console.log(postReview);
 
   //   .catch(error => console.log('ERROR'))
-  // event.target.comment.value = '';
-  // event.target.comment.value = '';
-  // event.target.comment.value = null;
 });

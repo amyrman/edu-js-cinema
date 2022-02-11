@@ -17,14 +17,10 @@
       {{! -----------------}}
     </div>
     {{{markdown movie.intro}}}
+    <h3 id="ratingTitle">Rating:</h3>
+    <div id="rating"></div>
   </div>
   <img src="{{movie.image.url}}" />
-
-  <div class="ratings">
-    <h3>Rating</h3> 
-    <div id="rating">
-    </div>
-  </div>
 </div>
 
 <h2 id="reviewTitle">Review movie</h2>
@@ -54,6 +50,6 @@
   </form>
 </div>
 
-<script src="/static/reviews_post.js"></script>
+<script src="/reviews_post.js"></script>
 <script src="/reviews.js"></script>
 <script src="/../movie.js"></script>

@@ -43,6 +43,10 @@ img {
   font-size: 32px;
 }
 
+.header {
+  background-color: #100f0f;
+  display: flex;
+}
 .header a {
   color: #fafafa;
   text-decoration: none;
@@ -52,24 +56,18 @@ img {
 .header a:hover {
   color: #c51010;
 }
-@media screen and (min-width: 960px) {
-  .header {
-    background-color: #100f0f;
-    display: flex;
-  }
-  .header li {
-    padding: 2rem 3rem;
-  }
-  .header .headerLogo {
-    text-align: center;
-    align-self: center;
-    padding-left: 1.2rem;
-    padding-right: 4rem;
-  }
-  .header .headerNavMenu {
-    display: flex;
-    justify-content: flex-end;
-  }
+.header li {
+  padding: 2rem 3rem;
+}
+.header .headerLogo {
+  text-align: center;
+  align-self: center;
+  padding-left: 1.2rem;
+  padding-right: 4rem;
+}
+.header .headerNavMenu {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .hero {
@@ -88,8 +86,7 @@ img {
   box-shadow: 0 -150px 100px #100f0f inset;
   transition: background-image 1s ease-in-out;
 }
-.hero .heroContainer .heroPicPrev,
-.hero .heroContainer .heroPicNext {
+.hero .heroContainer .heroPicPrev, .hero .heroContainer .heroPicNext {
   position: absolute;
   top: calc(50% - 30px);
   font-size: 30px;
@@ -98,8 +95,7 @@ img {
   font-style: bold;
   padding: 5px 15px;
 }
-.hero .heroContainer .heroPicPrev:hover,
-.hero .heroContainer .heroPicNext:hover {
+.hero .heroContainer .heroPicPrev:hover, .hero .heroContainer .heroPicNext:hover {
   background-color: rgba(110, 108, 108, 0.6);
 }
 .hero .heroContainer .heroPicPrev {
@@ -150,19 +146,17 @@ img {
     width: 600px;
   }
 }
-@media screen and (min-width: 960px) {
-  .aboutCovid {
-    background-color: #100f0f;
-    color: #fafafa;
-    padding: 6rem;
-  }
-  .aboutCovid h2 {
-    text-align: center;
-    padding: 1.3rem;
-  }
-  .aboutCovid p {
-    line-height: 1.5em;
-  }
+.aboutCovid {
+  background-color: #100f0f;
+  color: #fafafa;
+  padding: 6rem;
+}
+.aboutCovid h2 {
+  text-align: center;
+  padding: 1.3rem;
+}
+.aboutCovid p {
+  line-height: 1.5em;
 }
 
 .screeningsCardsHeader {
@@ -355,6 +349,9 @@ img {
 .moviePage .movieMeta p {
   font-size: 1.2rem;
 }
+.moviePage .movieMeta #ratingTitle {
+  margin-top: 1em;
+}
 .moviePage img {
   grid-column: 9/12;
   size: 100%;
@@ -454,12 +451,3 @@ select#styled {
 }
 
 /*# sourceMappingURL=main.css.map */
-
-.ratings {
-  display: flex;
-  justify-content: end;
-  padding-top: 30px;
-  flex-direction: column;
-  font-size: 30px;
-  align-items: center;
-}
