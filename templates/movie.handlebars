@@ -1,32 +1,32 @@
 <div class="moviePage">
+  <div class="reviews">
+    <ul id="reviewsList"></ul>
+  </div>
   <div class="movieMeta">
-    <h1>{{movie.attributes.title}}</h1>
+    <h1>{{movie.title}}</h1>
     {{! IMDB Rating Button }}
     {{! Stolen code from IMDB }}
     <div class="imdbBtn">
-      <span
-        class="imdbRatingPlugin"
-        data-user="ur7938290"
-        data-title="{{movie.attributes.imdbId}}"
-        data-style="p1"
-      >
-        <img
-          src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png"
-        />
-      </span>
       <script>
         (function(d,s,id){ var js, stags=d.getElementsByTagName(s)[0];
         if(d.getElementById(id)){ return; } js=d.createElement(s); js.id=id;
-        js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
+        //js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";
         stags.parentNode.insertBefore(js,stags); })
         (document,"script","imdb-rating-api");
       </script>
       {{! -----------------}}
     </div>
-    {{{markdown movie.attributes.intro}}}
+    {{{markdown movie.intro}}}
   </div>
-  <img src="{{movie.attributes.image.url}}" />
+  <img src="{{movie.image.url}}" />
+
+  <div class="ratings">
+    <h3>Rating</h3> 
+    <div id="rating">
+    </div>
+  </div>
 </div>
+
 <h2 id="reviewTitle">Review movie</h2>
 <div class="postReview">
   <form id="reviewForm" autocomplete="off" onsubmit="document.querySelector('#reviewForm').reset()">
@@ -55,3 +55,5 @@
 </div>
 
 <script src="/static/reviews_post.js"></script>
+<script src="/reviews.js"></script>
+<script src="/../movie.js"></script>

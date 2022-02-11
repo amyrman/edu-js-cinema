@@ -10,12 +10,15 @@
     "handlebars": "^4.7.7",
     "marked": "^4.0.10",
     "node-fetch": "^3.1.1",
+    "request": "^2.88.2",
     "sass": "^1.45.1"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "build": "nodemon . && sass --watch src/main.scss static/main.css",
-    "start": "node ."
+    "dev": "nodemon .",
+    "start": "node .",
+    "watch": "sass --watch src/main.scss static/main.css",
+    "build": "sass src/main.scss static/main.css"
   },
   "author": "Emil Noren",
   "license": "ISC",
@@ -28,7 +31,7 @@
   },
   "homepage": "https://github.com/stratosfloor/kino#readme",
   "devDependencies": {
-    "jest": "^27.4.7",
+    "jest": "^27.5.0",
     "nodemon": "^2.0.15",
     "supertest": "^6.2.2"
   }

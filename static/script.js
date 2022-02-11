@@ -1,13 +1,6 @@
 console.log("Running..");
 
-window.onload = async () => {
-  if(window.location.href.match('/')) {
-    render();
-    heroSlider();
-  }
-}
-
-// Load data from API/DB
+// Load movies data from API/DB
 const load = async() => {
   const url = 'data.json';
       try {
@@ -20,6 +13,7 @@ const load = async() => {
       }
 }
 
+// Load events data from the API/DB
 const loadEvents = async() => {
   const url = 'data.json';
       try {
@@ -32,12 +26,64 @@ const loadEvents = async() => {
       }
 }
 
+// Load screenings data from API
+const loadScreenings = async () => {
+  const url = '/api/screenings';
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    console.log(error)
+  }
+};
+
+const createScreeningCards = (screening, screeningsListEl) => {
+  const startDate = screening.start_time.substring(10,0);
+  const startTime = screening.start_time.substring(11, 16)
+
+  const screeningCardContainer = document.createElement('li');
+  screeningCardContainer.classList.add('screeningCardContainer');
+
+  const screeningCard = document.createElement('a');
+  screeningCard.classList.add('screeningCard');
+  screeningCard.href = `/movies/${screening.movieId}`;
+
+  const screeningCardMovieImage = document.createElement('div');
+  screeningCardMovieImage.classList.add('screeningCardMovieImage');
+  screeningCardMovieImage.style.backgroundImage = `url(${screening.image})`
+
+  const screeningCardInformation = document.createElement('div');
+  screeningCardInformation.classList.add('screeningCardInformation');
+
+  const screeningCardMovieTitle = document.createElement('h3');
+  screeningCardMovieTitle.classList.add('screeningCardMovieTitle');
+  screeningCardMovieTitle.innerHTML = screening.title;
+
+  const screeningCardMovieRoom = document.createElement('p');
+  screeningCardMovieRoom.classList.add('screeningCardMovieRoom');
+  screeningCardMovieRoom.innerHTML = `Salong: ${screening.room}`;
+
+  const screeningCardMovieTime = document.createElement('p');
+  screeningCardMovieTime.classList.add('screeningCardMovieTime');
+  screeningCardMovieTime.innerHTML = `Tid: ${startDate} - ${startTime}`;
+
+  screeningCard.appendChild(screeningCardMovieImage);
+  screeningCardInformation.appendChild(screeningCardMovieTitle);
+  screeningCardInformation.appendChild(screeningCardMovieRoom);
+  screeningCardInformation.appendChild(screeningCardMovieTime);
+  screeningCard.appendChild(screeningCardInformation);
+  screeningCardContainer.appendChild(screeningCard);
+  screeningsListEl.appendChild(screeningCardContainer);
+}
+
 const render = async () => {
   const data = await load()
   const eventsData = await loadEvents()
+  const screeningsData = await loadScreenings();
 
-  console.log('EVENTS LOADED')
-  console.log(eventsData)
+  // console.log('EVENTS LOADED')
+  // console.log(eventsData)
 
   const eventsElement = document.querySelector('.events');
 
@@ -114,8 +160,34 @@ const render = async () => {
       eventsContainer.appendChild(eventLink);
   }
 
-  console.log('MOVIES LOADED')
-  console.log(data)
+  const screeningsContainer = document.querySelector('.screeningsCards');
+
+  const screeningsLeft = document.createElement('div');
+  screeningsLeft.classList.add('screeningsCardsLeft');
+  const screeningsListLeft = document.createElement('ul');
+  screeningsListLeft.classList.add('screeningsListLeft');
+
+  screeningsData.splice(0, 5).forEach((screening) => {
+    createScreeningCards(screening, screeningsListLeft);
+  });
+
+    const screeningsRight = document.createElement('div');
+  screeningsRight.classList.add('screeningsCardsRight');
+  const screeningsListRight = document.createElement('ul');
+  screeningsListRight.classList.add('screeningsListRight');
+
+  screeningsData.forEach((screening) => {
+    createScreeningCards(screening, screeningsListRight)
+  });
+
+  screeningsContainer.appendChild(screeningsLeft);
+  screeningsContainer.appendChild(screeningsRight);
+  screeningsLeft.appendChild(screeningsListLeft);
+  screeningsRight.appendChild(screeningsListRight);
+
+
+  // console.log('MOVIES LOADED')
+  // console.log(data)
 }
 
 // render();
@@ -165,5 +237,11 @@ const heroSlider = async () => {
   setInterval(heroNextSlide, 10000);
 };
 
+window.onload = async () => {
+  if(window.location.href.match('/')) {
+    render();
+    heroSlider();
+  }
+};
 
 // heroSlider();
