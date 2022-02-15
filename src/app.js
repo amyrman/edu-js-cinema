@@ -1,12 +1,29 @@
 import express from "express";
 import { engine } from "express-handlebars";
+import { loadAllMovies, loadMovie, loadScreenings} from "./movies.js";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
+import {getScreenings} from "./movieScreenings.js";
 import api from "./movies.js";
 import { getRatings } from "./rates.js";
-import { loadAllMovies, loadMovie } from "./movies.js";
 import { loadReviews } from "./loadReviews.js"
 import { getUpcomingScreenings } from './screenings.js'
+
+
+
+const functionA = (screenings) => {
+  const screening = screenings.filter(obj => {
+    const screeningTime = new Date(obj.attributes.start_time);
+    return screeningTime > now; 
+  })
+  .slice(0, 10);
+  console.log(screening);
+  return [];
+}
+
+
+
+
 
 
 
@@ -36,6 +53,22 @@ app.get("/movies", async (request, response) => {
   const movies = await api.loadAllMovies();
   response.render("allMovies", { movies, kino });
 });
+
+
+app.get("/movies/:Id", async (request, response) => {  
+  const movie = await loadMovie(request.params.Id);
+  movie
+    ? response.render("movie", { movie, kino })
+    : response.status(404).render("404", { kino });
+})
+
+ app.get("/api/screenings/:id", async (request, response) => { 
+      const screenings = await getScreenings(request.params.id);
+      getScreenings
+      ? response.status(200).json(screenings)
+      : response.status(404).render("404",{ kino });
+  });
+   
 
 app.get("/movies/:movieId", async (request, response) => {
   const movie = await api.loadMovie(request.params.movieId);
@@ -77,7 +110,6 @@ app.get("/api/movies/:id/reviews", async (request, response) => {
     })),
   })};
 });
-
 
 app.use("/", express.static("./static"));
 

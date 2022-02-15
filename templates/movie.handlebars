@@ -18,6 +18,16 @@
       </script>
       {{! ---------------------}}
     </div>
+    {{{markdown movie.attributes.intro}}}
+     
+    <div id="screenings">
+      <h2>Kommande visningar</h2>
+      <ul id="screeningsList"></ul>
+    </div>
+
+  </div>
+  <img src="{{movie.attributes.image.url}}" />
+  
     {{{markdown movie.intro}}}
   <img src="{{movie.image.url}}" />
 
@@ -25,10 +35,14 @@
       <h3>Rating</h3> 
     <div id="rating"></div>
 </div>
+</div>
+
+
+  
 
 
 
-
-
+<script src="/../screening.js"></script>
 <script src="/reviews.js"></script>
 <script src="/../movie.js"></script>
+
