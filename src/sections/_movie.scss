@@ -3,6 +3,41 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 
+  .reviews {
+    grid-column: 1 / 3;
+    
+
+    li {
+      margin: 0.5em;
+      span {
+        display: flex;
+        flex-direction: row;
+      }
+      .reviewComment {
+        font-size: 1rem;
+      }
+      .reviewRating {
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      .reviewAuthor {
+        font-style: italic;
+        font-size: 0.75rem;
+      }
+    }
+    .reviewPages {
+      text-align: center;
+      * {
+        margin: 0.3em;
+      }
+      a {
+        cursor: pointer;
+      }
+    }
+
+  }
+  
+
   .movieMeta {
     grid-column: 4 / 8;
     margin-bottom: 1em;
@@ -18,8 +53,13 @@
   
   }
 
+  
+
   img {
     grid-column: 9 / 12;
     size: 100%;
   }
 }
+
+
+
