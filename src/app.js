@@ -1,6 +1,6 @@
 import express from "express";
 import { engine } from "express-handlebars";
-import { loadAllMovies, loadMovie, loadScreenings} from "./movies.js";
+import {  loadMovie} from "./movies.js";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
 import {getScreenings} from "./movieScreenings.js";
@@ -45,22 +45,30 @@ app.set("views", "./templates");
 app.get("/", async (request, response) => {
   response.render("index", { kino });
 });
-app.get("/index", async (request, response) => {
-  response.render("index", { kino });
-});
+// app.get("/index", async (request, response) => {
+//   response.render("index", { kino });
+// });
 
 app.get("/movies", async (request, response) => {
   const movies = await api.loadAllMovies();
   response.render("allMovies", { movies, kino });
 });
 
-
-app.get("/movies/:Id", async (request, response) => {  
-  const movie = await loadMovie(request.params.Id);
+app.get("/movies/:movieId", async (request, response) => {
+  const movie = await api.loadMovie(request.params.movieId);
   movie
-    ? response.render("movie", { movie, kino })
-    : response.status(404).render("404", { kino });
-})
+  ? response.render("movie", { movie, kino })
+  : response.status(404).render("404", { kino });
+
+});
+
+
+// app.get("/movies/:Id", async (request, response) => {  
+//   const movie = await loadMovie(request.params.Id);
+//   movie
+//     ? response.render("movie", { movie, kino })
+//     : response.status(404).render("404", { kino });
+// })
 
  app.get("/api/screenings/:id", async (request, response) => { 
       const screenings = await getScreenings(request.params.id);
@@ -70,13 +78,7 @@ app.get("/movies/:Id", async (request, response) => {
   });
    
 
-app.get("/movies/:movieId", async (request, response) => {
-  const movie = await api.loadMovie(request.params.movieId);
-  movie
-  ? response.render("movie", { movie, kino })
-  : response.status(404).render("404", { kino });
 
-});
 
 app.get("/api/movies/:movieId/rating", async (request, response) => {
   response.json(await getRatings(request));

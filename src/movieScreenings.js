@@ -16,7 +16,7 @@ export async function getScreenings(id) {
 
 export async function filterUpcoming(screenings, now) {
   const data = screenings.filter(obj => {
-    const screeningTime = new Date(obj.time);
+    const screeningTime = new Date(obj.attributes.start_time);
     return screeningTime > now;
   })
   .slice(0, 10);

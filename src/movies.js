@@ -1,5 +1,4 @@
 import fetch from "node-fetch";
-
 const API = 'https://lernia-kino-cms.herokuapp.com/api/movies';
 const APIBASE = 'https://lernia-kino-cms.herokuapp.com/api';
 
@@ -33,7 +32,7 @@ export async function loadMovie(id) {
 }
 
 export async function loadRating(movieId) {
-  const res = await fetch(API_BASE + "/reviews?filters[movie]=" + movieId);
+  const res = await fetch(APIBASE + "/reviews?filters[movie]=" + movieId);
   const payload = await res.json();
 
   return payload.data.map(simplifyObject);
@@ -43,18 +42,17 @@ export async function loadRating(movieId) {
 export async function loadScreenings (id){
   const data = await fetch(`${APIBASE}/screenings?filters[movie]=${id}`)
   .then(respons => respons.json()); 
+
+
   return data.data;
 }
 
-export default{
-  loadScreenings
-
-}
 
 
 export default {
   loadRating: loadRating,
   loadAllMovies: loadAllMovies,
   loadMovie: loadMovie,
+  loadScreenings: loadScreenings,
 };
 
