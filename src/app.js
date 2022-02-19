@@ -1,15 +1,27 @@
 import express from "express";
 import fetch from "node-fetch";
 import { engine } from "express-handlebars";
+import {  loadMovie} from "./movies.js";
 import { kino } from "./kinoBuilds.js";
 import { marked } from "marked";
+import {getScreenings} from "./movieScreenings.js";
 import api from "./movies.js";
 import { getRatings } from "./rates.js";
-import { loadAllMovies, loadMovie } from "./movies.js";
-import { loadReviews } from "./loadReviews.js";
-import { getUpcomingScreenings } from "./screenings.js";
+import { loadReviews } from "./loadReviews.js"
+import { getUpcomingScreenings } from './screenings.js'
+
+const functionA = (screenings) => {
+  const screening = screenings.filter(obj => {
+    const screeningTime = new Date(obj.attributes.start_time);
+    return screeningTime > now; 
+  })
+  .slice(0, 10);
+  console.log(screening);
+  return [];
+}
 
 const app = express();
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -28,9 +40,9 @@ app.get("/", async (request, response) => {
   response.render("index", { kino });
 });
 
-app.get("/index", async (request, response) => {
-  response.render("index", { kino });
-});
+// app.get("/index", async (request, response) => {
+//   response.render("index", { kino });
+// });
 
 app.get("/movies", async (request, response) => {
   const movies = await api.loadAllMovies();
@@ -43,6 +55,20 @@ app.get("/movies/:movieId", async (request, response) => {
     ? response.render("movie", { movie, kino })
     : response.status(404).render("404", { kino });
 });
+
+// app.get("/movies/:Id", async (request, response) => {  
+//   const movie = await loadMovie(request.params.Id);
+//   movie
+//     ? response.render("movie", { movie, kino })
+//     : response.status(404).render("404", { kino });
+// })
+
+ app.get("/api/screenings/:id", async (request, response) => { 
+      const screenings = await getScreenings(request.params.id);
+      getScreenings
+      ? response.status(200).json(screenings)
+      : response.status(404).render("404",{ kino });
+  });
 
 app.get("/api/movies/:movieId/rating", async (request, response) => {
   response.json(await getRatings(request));
@@ -62,7 +88,6 @@ app.get("/api/screenings", async (request, response) => {
 });
 
 app.post("/movies/:id/reviews", async (request, response) => {
-  // console.log(request.body);
 
   const resp = await fetch(
     "https://lernia-kino-cms.herokuapp.com/api/reviews",
@@ -71,14 +96,12 @@ app.post("/movies/:id/reviews", async (request, response) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(request.body), // logga request.body för att se vad JSON gör, utan JSON, med JSON.parse
+      body:
+      JSON.stringify(request.body),
     }
   );
-  console.log(resp);
   response.status(200).json(resp);
 });
-
-// app.use("/static", express.static("./static"));
 
 app.get("/api/movies/:id/reviews", async (request, response) => {
   const movie = await loadMovie(request.params.id);

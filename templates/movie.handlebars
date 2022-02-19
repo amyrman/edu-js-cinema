@@ -14,42 +14,59 @@
         stags.parentNode.insertBefore(js,stags); })
         (document,"script","imdb-rating-api");
       </script>
-      {{! -----------------}}
+      {{! ---------------}}
     </div>
-    {{{markdown movie.intro}}}
-    <h3 id="ratingTitle">Rating:</h3>
-    <div id="rating"></div>
+
   </div>
+  <img src="{{movie.attributes.image.url}}" />
+
+  {{!-- {{{markdown movie.intro}}} --}}
   <img src="{{movie.image.url}}" />
+
+  <div class="ratings">
+    <h3>Rating</h3>
+    <div id="rating"></div>
+
+    <div id="screenings">
+      <h2>Kommande visningar</h2>
+      <ul id="screeningsList"></ul>
+    </div>
+
+  </div>
 </div>
 
 <h2 id="reviewTitle">Review movie</h2>
 <div class="postReview">
-  <form id="reviewForm" autocomplete="off" onsubmit="document.querySelector('#reviewForm').reset()">
+  <form
+    id="reviewForm"
+    autocomplete="off"
+    onsubmit="document.querySelector('#reviewForm').reset()"
+  >
     <textarea name="comment" placeholder="Comment"></textarea>
     <input type="hidden" name="movie" value="{{movie.id}}" />
     <label for="rating">Rating</label>
     <div>
-    <select id="styled" name="rating" required>
-      <option value="">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      value="{{savedName}}"
-      required
-    />
+      <select id="styled" name="rating" required>
+        <option value="">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        value="{{savedName}}"
+        required
+      />
     </div>
-    <input type="submit">
+    <input type="submit" />
   </form>
 </div>
 
 <script src="/reviews_post.js"></script>
+<script src="/../screening.js"></script>
 <script src="/reviews.js"></script>
 <script src="/../movie.js"></script>

@@ -1,4 +1,4 @@
-async function renderReview(movieId) {
+async function renderRating(movieId) {
   const res = await fetch(`/api/movies/${movieId}/rating`);
   const payload = await res.json();
 
@@ -35,10 +35,10 @@ async function renderReview(movieId) {
   rateDiv.append(parent);
 }
 
-const url = window.location.href;
-const arr = url.split("/");
-const id = arr[arr.length - 1];
+const linken = window.location.href;
+const barr = linken.split("/");
+const barrID = barr[barr.length - 1];
 
-renderReview(id);
+renderRating(barrID);
 
 
