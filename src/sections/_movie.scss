@@ -1,13 +1,17 @@
-.moviePage {
+.moviePage
+{
   margin: 2rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 
-  .reviews {
+  .reviews
+  {
     grid-column: 1 / 3;
-    
 
-    li {
+
+    
+    li
+    {
       margin: 0.5em;
       span {
         display: flex;
@@ -25,7 +29,9 @@
         font-size: 0.75rem;
       }
     }
-    .reviewPages {
+    
+    .reviewPages
+    {
       text-align: center;
       * {
         margin: 0.3em;
@@ -34,26 +40,29 @@
         cursor: pointer;
       }
     }
-
   }
   
-
-  .movieMeta {
+  .movieMeta
+  {
     grid-column: 4 / 8;
     margin-bottom: 1em;
+    
     h1 {
       font-size: 2rem;
     }
+    
     .imdbBtn {
       margin-bottom: 1em;
     }
+    
     p {
       font-size: 1.2rem;
     }
-  
+    
+    #ratingTitle {
+      margin-top: 1em;
+    }
   }
-
-  
 
   img {
     grid-column: 9 / 12;
@@ -61,5 +70,35 @@
   }
 }
 
+.postReview {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;  
+}
 
+#reviewTitle {
+  margin-bottom: 0.5rem;
+}
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+}
+
+input {
+  padding: 10px;
+}
+
+textarea {
+height: 10vh;
+width: 25vh;
+padding: 10px;
+}
+
+select#styled {
+  margin-right: 50px;
+  padding: 10px;
+  width:fit-content;
+}

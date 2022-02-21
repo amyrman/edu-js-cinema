@@ -4,7 +4,7 @@
     @include menu-link;
     font-weight: bold;
   }
-  @include desktop {
+  // @include desktop {
     background-color: $c-black;
     display: flex;
 
@@ -23,5 +23,5 @@
       display: flex;
       justify-content:flex-end;
     }
-  }
+  // }
 }
