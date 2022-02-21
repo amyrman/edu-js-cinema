@@ -357,15 +357,14 @@ img {
   size: 100%;
 }
 
-#reviewTitle {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
 .postReview {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+#reviewTitle {
+  margin-bottom: 0.5rem;
 }
 
 form {
