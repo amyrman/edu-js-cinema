@@ -1,10 +1,10 @@
 <div class="moviePage">
   <div class="reviews">
-    <h3>User Reviews</h3>
+    <h2>User Reviews</h2>
     <ul id="reviewsList"></ul>
     {{!-- Review form start --}}
     <div class="postReview">
-      <h3 id="reviewTitle">Post your own review</h2>
+      <h2 id="reviewTitle">Post your own review</h2>
       <form
         id="reviewForm"
         autocomplete="off"
@@ -51,11 +51,11 @@
     </div>
     {{{markdown movie.intro}}}
     <div class="ratings">
-      <h3 id="ratingTitle">Rating</h3>
+      <h2 id="ratingTitle">Rating</h2>
       <div id="rating"></div>
     </div>
   </div>
-  <img src="{{movie.image.url}}" />
+  <img src="{{movie.image.url}}" alt="Movie image"/>
 </div>
 
 <script src="/reviews_post.js"></script>

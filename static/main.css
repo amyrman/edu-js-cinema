@@ -22,7 +22,7 @@ img {
 .footer .footerLinks a {
   margin: 0px 10px;
 }
-.footer a:hover {
+.footer .footerLinks a:hover {
   color: #2006b3;
 }
 .footer .adress {

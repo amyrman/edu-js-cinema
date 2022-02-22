@@ -33,11 +33,13 @@
     </main>
     <div class="footer">
       <div class="footerLinks">
+        <ul>
           {{#each kino.menu}}
           <li>
             <a href="{{ this.link }}">{{ this.label }}</a>
           </li>
           {{/each}}
+        </ul>
       </div>
       <p class="adress">{{ kino.adress }}</p>
       <ul class="socialMedia">
