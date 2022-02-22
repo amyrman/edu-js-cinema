@@ -18,7 +18,8 @@
     "dev": "nodemon .",
     "start": "node .",
     "watch": "sass --watch src/main.scss static/main.css",
-    "build": "sass src/main.scss static/main.css"
+    "build": "sass src/main.scss static/main.css",
+    "cyptest": "npx cypress run --spec cypress/integration/home_page_spec.js"
   },
   "author": "Emil Noren",
   "license": "ISC",
@@ -31,6 +32,7 @@
   },
   "homepage": "https://github.com/stratosfloor/kino#readme",
   "devDependencies": {
+    "cypress": "^9.5.0",
     "jest": "^27.5.0",
     "nodemon": "^2.0.15",
     "supertest": "^6.2.2"
