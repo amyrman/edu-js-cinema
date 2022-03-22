@@ -1,4 +1,4 @@
-# Kino på MARS!
+# Forked study project -- Cinema Site
 
 ## Screenings
 
