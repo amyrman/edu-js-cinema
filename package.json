@@ -21,16 +21,13 @@
     "build": "sass src/main.scss static/main.css",
     "cyptest": "npx cypress run --spec cypress/integration/home_page_spec.js"
   },
-  "author": "Emil Noren",
+  "author": "Anders Myrman <amyhrman@gmail.com>",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stratosfloor/kino.git"
+    "url": ""
   },
-  "bugs": {
-    "url": "https://github.com/stratosfloor/kino/issues"
-  },
-  "homepage": "https://github.com/stratosfloor/kino#readme",
+  "homepage": "",
   "devDependencies": {
     "cypress": "^9.5.0",
     "jest": "^27.5.0",
