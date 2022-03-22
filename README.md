@@ -52,7 +52,7 @@ If no such movie exists, returns 404.
 It's used to see the if the reviews are more than 5, then it will the script will calculated the average of it and show it.
 If reviews are less then 5, then it will take the IMBD rating and show it. 
 
-- **Method and ULR:**
+- **Method and URL:**
 GET: /api/movies/:movieId/rating
 Response: 200 OK
 
@@ -67,3 +67,4 @@ Response: 200 OK
 {"rating":4},{"rating":3},{"rating":4},
 {"rating":3},{"rating":2},{"rating":1}]}
 
+wireframe: https://whimsical.com/KiMnqQzY8fR66TwyvNxcRz
